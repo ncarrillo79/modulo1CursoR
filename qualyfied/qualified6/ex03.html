@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex03</title>
+  </head>
+  <body>
+    <script>
+      /*
+    Escreva uma função que recebe como entrada um vetor (array) de inteiros de dez elementos
+(apenas números de 0 a 9) e retorne uma string com o formato de um número de telefone.
+
+Exemplo:
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+O formato retornado deve estar correto para que o desafio esteja completo.
+
+Não esqueça do espaço após fechar os parêntesis!*/
+
+      function createPhoneNumber(numbers) {
+        return (
+          '(' +
+          numbers[0] +
+          numbers[1] +
+          numbers[2] +
+          ')' +
+          ' ' +
+          numbers[3] +
+          numbers[4] +
+          numbers[5] +
+          '-' +
+          numbers[6] +
+          numbers[7] +
+          numbers[8] +
+          numbers[9]
+        );
+      }
+
+      var numTel = createPhoneNumber('1234567890');
+      console.log(numTel);
+    </script>
+  </body>
+</html>

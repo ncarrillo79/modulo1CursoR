@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document2</title>
+  </head>
+  <body>
+    <script>
+      function menu(pedido1, pedido2, pedido3) {
+        document.write('O pedido é:' + pedido1 + '<br>');
+        document.write('O pedido é:' + pedido2 + '<br>');
+        document.write('O pedido é:' + pedido3 + '<br>');
+      }
+
+      menu('refrigerante ', 'suco ', 'agua');
+      var numeroDoPedido = prompt(' 1 refrigerante\n 2 suco\n 3 agua\n');
+
+      if (numeroDoPedido == 1) {
+        document.write('refrigerante');
+      } else if (numeroDoPedido == 2) {
+        document.write('suco');
+      } else if (numeroDoPedido == 3) {
+        document.write('agua');
+      } else if (numeroDoPedido == 4) {
+        document.write('guaraná');
+      } else if (numeroDoPedido == 5) {
+        document.write('cerveja');
+      } else {
+        document.write('Que é isso?');
+      }
+    </script>
+  </body>
+</html>

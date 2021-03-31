@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+               Nesse exercício, iremos contar carneirinhos, mas sem dormir no processo. Sua função deve receber um array/lista de carneiros (representados pelo valor true) e contar quantos carneiros existem nessa lista/array.
+
+      Por exemplo,
+
+      [true,  true,  true,  false,
+        true,  true,  true,  true ,
+        true,  false, true,  false,
+        true,  false, false, true ,
+        true,  true,  true,  true ,
+        false, false, true,  true]
+      A resposta correta deve ser 17.
+
+      Dica: Não esqueça de tratar casos em que existam valores como null / undefined */
+
+      function contaCarneirinhos(lista) {
+        let somacarneirinhos = 0;
+        for (let i = 0; i < lista.length; i++) {
+          if (lista[i] == true) {
+            somacarneirinhos += lista[i];
+          }
+        }
+        return somacarneirinhos;
+      }
+    </script>
+  </body>
+</html>

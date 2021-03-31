@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font: normal 20pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt('Qual e seu nome?');
+      document.write(
+        `Olá <strong>${nome},</strong> seu nome tem ${nome.length} letras </br>`
+      );
+      document.write(
+        `Olá seu nome em maiúsculas é  ${nome.toUpperCase()}</br>`
+      );
+      document.write(
+        `Olá seu nome em minúsculas é  ${nome.toLowerCase()}</br>`
+      );
+
+      /* Otros métodos de tratamiento de datos
+      var n1 = 1545.5;
+      n1;
+      1545.5;
+      n1.toFixed(2);
+      '1545.50' > n1.toFixed(3);
+      ('1545.500');
+      n1.toFixed(3).replace('.', ',');
+      ('1545,500');
+
+      n1.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+      'R$ 1,545.50'
+      */
+
+      /*orden de precedencia dos operadores
+      1) ()
+      2) * *
+      3) * / %
+      4) + -
+      n=3
+      var n=3
+      n=n+4 => n+=4 =>n++
+      n=n-5 => n-=5 => n--
+      n=n*4 => n*=4
+      n=n/4 => n/=4
+      n=n**4 => n**=4
+      n=n%5  =>n%=5
+
+      operador ternario:
+       var media =5.5
+      teste ? true: false = media>=7.0? "Aprovado":"reprovado"
+      exemplo1
+      > media>7?'aprovado':'reprovado'
+      'reprovado'
+      > media+=3
+      8.5
+      > media>7?"aprovado":"reprovado"
+      'aprovado'
+
+      exemplo2
+      var x=8
+      var res=x%2 == 0? 5:9
+      res=5, "imprime 9 porque el resto es cero(0) es verdadero"
+
+      exemplo3
+      var idade=18
+      idade
+      18
+      >var r= idade>=18? 'maior':'menor'
+      >r
+      'maior'
+      */
+    </script>
+  </body>
+</html>

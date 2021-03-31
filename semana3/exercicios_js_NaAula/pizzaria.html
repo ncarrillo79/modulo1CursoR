@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria</title>
+  </head>
+  <body>
+    <script>
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      function calculaPizza(precoPizza, valorPizza, nomePizza) {
+        var ImpostoPizza = Math.round(valorPizza * (8.9 / 100));
+        var lucroLiquido = valorPizza - precoPizza - ImpostoPizza;
+
+        return (
+          'Para a pizza ' +
+          nomePizza +
+          ' o lucro líquido é de R$ ' +
+          lucroLiquido +
+          ' imposto de ' +
+          ImpostoPizza
+        );
+      }
+
+      document.write(calculaPizza(65, 75, 'margarita'));
+
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+    </script>
+  </body>
+</html>

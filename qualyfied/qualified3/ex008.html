@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Escreva uma função que receba como entrada uma string de dígitos. Essa função deve trocar todos os dígitos que forem menores do que 5 por '0' e todos os dígitos maiores do que 5 para '1'.
+O resultado deve ser retornado como uma string.*/
+      var numeros = [];
+      function fakeBin(x) {
+        for (i = 0; i < x.length; i++) {
+          let elementos = x[i];
+          if (elementos < 5) {
+            numeros.push(0);
+          } else {
+            numeros.push(1);
+          }
+        }
+
+        return numeros;
+      }
+
+      var res = fakeBin(756936);
+
+      console.log(res);
+    </script>
+  </body>
+</html>

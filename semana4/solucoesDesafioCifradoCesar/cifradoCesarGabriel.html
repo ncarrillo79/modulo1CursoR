@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function cifraComCifraDeCesar(deslocamento, mensagem) {
+        // Aonde começa o nosso alfabeto
+        var limiteInicio = 'A'.charCodeAt(0);
+        // Final do alfabeto
+        var limiteFinal = 'Z'.charCodeAt(0);
+
+        // Tamanho do alfabeto
+        var intervalo = limiteFinal - limiteInicio + 1;
+
+        // Deslocamento modular
+        var deslocamentoLimitado = deslocamento % intervalo;
+
+        // Armazena a mensagem encriptada enquanto ela é construída
+        var mensagemEncriptada = '';
+
+        // Para cada letra da mensagem...
+        for (var i = 0; i < mensagem.length; i++) {
+          // Código da letra
+          var codigoLetra = mensagem.charCodeAt(i);
+
+          // Normalizado no alfabeto
+          var codigoLetraLimitado =
+            (codigoLetra - limiteInicio + deslocamentoLimitado) % intervalo;
+
+          // Joga pro valor verdadeiro
+          codigoLetra = codigoLetraLimitado + limiteInicio;
+
+          // Transforma novamente em uma letra
+          var letraCifrada = String.fromCharCode(codigoLetra);
+
+          // Concatena a letra cifrada com o que já foi construído da mensagem toda
+          mensagemEncriptada += letraCifrada;
+        }
+
+        return mensagemEncriptada;
+      }
+
+      function cifra() {
+        // Pega valor do deslocamento
+        var d = parseInt(document.getElementById('deslocamento_cifra').value);
+        // Pega valor da mensagem
+        var m = document.getElementById('mensagem_cifra').value;
+
+        // Mostra um alerta com a mensagem cifrada
+        alert(cifraComCifraDeCesar(d, m));
+      }
+    </script>
+  </body>
+</html>

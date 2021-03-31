@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <script src=""></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <script src="mvc.js"></script>
+    <div id="conteudo">
+      <img src id="imgPlaneta" alt="imagemPlaneta" />
+      <h1 id="name">name</h1>
+      <h3>Informaçoes</h3>
+    </div>
+
+    <script>
+      let botao = document.createElement('button');
+      botao.innerHTML = 'Pesquisar';
+      document.body.append(botao);
+
+      let conteudo = document.querySelector('#conteudo'); //pegamos la div conteudo
+
+      let informacoes = document.createElement('p'); //creamos un parágrafo con las informacoes dos user y...
+      conteudo.appendChild(informacoes); //agregamos el paragrafo a la div conteudo
+
+      botao.addEventListener('click', function () {
+        let pedido = new XMLHttpRequest();
+
+        pedido.onreadystatechange = function (dados) {
+          if (this.status == 200 && this.readyState == 4) {
+            var objeto = JSON.parse(this.responseText); //transforma o objeto JASON desarrumado em um objeto legível
+            //let imagem = objeto.results[0].picture.large; //pegamos do JSON a forma do formato foto
+            let imagem = objeto.url;
+            console.log(imagem);
+            let $foto = document.querySelector('#imgPlaneta'); //trazemos do HTML a id da imagem
+            $foto.src = imagem; // utilizamos o metodo src do DOM para renderizar a imagem
+
+            informacoes.innerHTML = `Autor: ${objeto.copyright}<br>Data: ${objeto.date}<br>Data: ${objeto.explanation}`;
+            //informacoes.innerHTML = `Nome: ${objeto.results[0].name.first}<br>Idade: ${objeto.results[0].dob.age}<br>Data: ${objeto.results[0].dob.date}<br>Foto: ${objeto.results[0].picture.large}<br>`;
+            //nesta linha estamos colocando o formato  ao paragrafo informações dos user que vão aparecer dentro  dentro da div conteudo
+
+            // console.log(imagem);
+          }
+        };
+
+        pedido.open(
+          'GET',
+          'https://api.nasa.gov/planetary/apod?api_key=qG8WBXy9fZktQq26zCJTUEzG6qX4DC1jXxPAa6BX'
+        );
+
+        pedido.send();
+      });
+    </script>
+  </body>
+</html>

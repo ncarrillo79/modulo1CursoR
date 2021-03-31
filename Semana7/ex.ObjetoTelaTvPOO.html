@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      'use strict';
+
+      class Produto {
+        constructor(numSerie) {
+          this.numSerie = numSerie;
+          this.tiempoGarantia = 100;
+        }
+
+        static get infoLoja() {
+          console.log('Produtos da Loja Resilia');
+        }
+
+        set garantia(value) {
+          this.tiempoGarantia -= value;
+        }
+
+        get garantia() {
+          return this.tiempoGarantia;
+        }
+      }
+
+      class Tela extends Produto {
+        constructor(numSerie, marca, modelo, medidas) {
+          super(numSerie);
+          this.marca = marca;
+          this.modelo = modelo;
+          this.medidas = medidas;
+        }
+
+        encendido() {
+          this.garantia = 2;
+          console.log(`A tela ${this.marca} esta ligada`);
+        }
+
+        volumen() {
+          console.log(`O volumen tem sido aumentado`);
+        }
+
+        info() {
+          console.log(
+            `A tela ${this.marca} de modelo ${this.modelo} es de ${this.medidas} polegadas`
+          );
+        }
+        set peso(value) {
+          this.kgs = value.trim();
+        }
+
+        get peso() {
+          return this.kgs;
+        }
+      }
+
+      const tvSala = new Tela('1345', 'Master', 'Philips', 40);
+      const tvHabitacion = new Tela('5678', 'Samsung', 'Basic', 80);
+    </script>
+  </body>
+</html>

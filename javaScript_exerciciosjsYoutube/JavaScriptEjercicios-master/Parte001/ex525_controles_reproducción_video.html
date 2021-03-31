@@ -1,0 +1,71 @@
+<!-- Ejercicio 525: Crear una interfaz con controles para un reproductor de vídeo. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 525</title>
+</head>
+<body>
+    
+    <video id="ondasGravitacionales">
+        <source src="gravitational-waves-ligo-video.mp4" type="video/mp4" />
+        <source src="gravitational-waves-ligo-video.webm" type="video/webm" />
+    </video>
+    <div id="tiempoReproduccion"></div>
+    <div id="controles">
+        <button id="iniciar">Iniciar</button>
+        <button id="detener" disabled>Detener</button>
+        <button id="pausar" disabled>Pausar</button>
+    </div>
+
+    <script>
+        function iniciarReproduccion() {
+            let ondasGravitacionales = document.getElementById('ondasGravitacionales');
+            ondasGravitacionales.play();
+            this.disabled = true;
+            document.getElementById('detener').disabled = false;
+            document.getElementById('pausar').disabled = false;
+        }
+
+        function detenerReproduccion() {
+            let ondasGravitacionales = document.getElementById('ondasGravitacionales');
+            ondasGravitacionales.pause();
+            ondasGravitacionales.currentTime = 0;
+
+            document.getElementById('iniciar').disabled = false;
+            document.getElementById('pausar').disabled = true;
+            this.disabled = true;
+        }
+
+        function pausarReproduccion () {
+            document.getElementById('ondasGravitacionales').pause();
+            this.disabled = true;
+            document.getElementById('iniciar').disabled = false;
+            document.getElementById('detener').disabled = true;
+        }
+
+        function actualizarTiempoReproduccion() {
+            let tiempo = Math.round(this.currentTime);
+            let tiempoReproduccion = document.getElementById('tiempoReproduccion');
+            tiempoReproduccion.innerHTML = `${tiempo} segundos`;
+        }
+
+        window.addEventListener('load', () => {
+            document.getElementById('iniciar').addEventListener('click', iniciarReproduccion);
+            document.getElementById('detener').addEventListener('click', detenerReproduccion);
+            document.getElementById('pausar').addEventListener('click', pausarReproduccion);
+
+            let ondasGravitacionales = document.getElementById('ondasGravitacionales');
+            ondasGravitacionales.addEventListener('timeupdate', actualizarTiempoReproduccion);
+
+            let deteccionVideo = document.createElement('video');
+
+            if(!deteccionVideo.canPlayType){
+                documento.getElementById('controles').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

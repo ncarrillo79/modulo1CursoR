@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Nesse exercício, você irá receber um array de números inteiros, e deve retornar a soma de todos os seus números positivos.
+
+      Exemplo [1,-4,7,12] => 1 + 7 + 12 = 20
+
+      Observação: Caso não tenha nada para ser somado, o valor padrão para a soma será 0.*/
+      function somaPositivos(arr) {
+        let soma = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] > 0) {
+            soma = soma + arr[i];
+          }
+        }
+        return soma;
+      }
+    </script>
+  </body>
+</html>

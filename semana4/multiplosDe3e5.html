@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Listar soma de todos os números naturais múltiplos de 3 y 5 menores
+      que o valor passado. Por exemplo, se pasarmos 10 como valor , os múltiplos são
+      3,5,6 e 9. A soma desses múltiplos dá 23. caso o número  passado for negativo
+      retorne 0.
+      */
+      //Multiplos de 3
+      //multiplos de 5,10
+      //somando múltiplos
+
+      // armazenar os multiplos de 3
+      // armazenar os multiplos de 5
+      // somar os dois
+
+      function somar(limite) {
+        let multiplosDe3 = 0;
+        let multiplosDe5 = 0;
+        var i = 0;
+
+        for (i = 0; i < limite; i++) {
+          if (i % 3 === 0) multiplosDe3 += i;
+          if (i % 5 === 0) multiplosDe5 += i;
+        }
+        console.log(multiplosDe3 + multiplosDe5);
+      }
+
+      somar(10);
+    </script>
+  </body>
+</html>

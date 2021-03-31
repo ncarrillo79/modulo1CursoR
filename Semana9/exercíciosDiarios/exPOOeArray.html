@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Cria uma função construtora llamada Produto que receba dois argumentos: o nome e o preço. a função deverá inicializar as propriedades nome e preço do objeto con los valores que chegam como parámetros.
+      // A continuação amostramos algúns exemplos da forma como vai se utilizae esta função construtora
+
+      // function Produto(nome, preco) {
+      //   this.nome;
+      //   this.preco;
+      // }
+
+      // // const leite=new Produto("Leite",3.7)
+      // //leite.nome//"Leite"
+      // //leite.preco//3.7
+
+      // //const pao=new Produto("Pão",3.7)
+      // //Pao.nome//"Pão"
+      // //leite.preco//3.7
+
+      // *************************************
+
+      // Imprima um array na consola, o resultado deve ser o seguinte
+
+      // const array = [
+      //   ['pablo', 'maria', 'pedro'],
+      //   ['diana', 'juan', 'federico'],
+      //   ['roberto', 'Daniel', 'sandra'],
+      // ];
+      // Grupo 1:
+      // Pablo
+      // Maria
+      // Pedro
+      // Grupo 2:
+      // diana
+      // juan
+      // federico
+      // Grupo 3:
+      // roberto
+      // Daniel
+      // sandra
+
+      // Dica1 : usar loops aninhados,
+      // Dica2 : acrescente dois espaços no começo de cada nome
+
+      const array = [
+        ['pablo', 'maria', 'pedro'],
+        ['diana', 'juan', 'federico'],
+        ['roberto', 'Daniel', 'sandra'],
+      ];
+      for (let i = 0; i < array.length; i++) {
+        //esta de arriba es la array externa
+        //console.log(array[i]); // es la impresión de la array externa
+        console.log('Grupo ' + (i + 1) + ':'); // imprime el titulo Grupo (i+1):
+        for (let j = 0; j < array.length; j++) {
+          console.log(' ' + array[i][j]);
+        }
+      }
+
+      // const array = [
+      //   ['pablo', 'maria', 'pedro'],
+      //   ['diana', 'juan', 'federico'],
+      //   ['roberto', 'Daniel', 'sandra'],
+      // ];
+      // for (let i = 0; i < array.length; i++) {
+      //   //esta de arriba es la array externa
+      //   //console.log(array[i]); // es la impresión de la array externa
+      //   console.log('Grupo ' + (i + 1) + ':'); // imprime el titulo Grupo (i+1):
+      //   for (let j = 0; j < array.length; j++) {
+      //     console.log(array[i][j]);
+      //   }
+      // }
+
+      //*****************************************
+    </script>
+  </body>
+</html>

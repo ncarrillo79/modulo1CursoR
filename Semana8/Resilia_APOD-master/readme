@@ -1,0 +1,4 @@
+Projeto apresentado como exercício sobre modelagem MVC utilizando a API APOD da NASA, Turma #3 do Resilia Educação.
+
+O exercício consiste em renderizar as imagens e descrições utilizadas no site da APOD <https://apod.nasa.gov/apod/astropix.html>, 
+adicionar um input para buscar as imagens anteriores por data.

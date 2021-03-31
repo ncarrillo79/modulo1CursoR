@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*1. Concatena strings: Crie uma função que recebe como parâmetro duas strings. Essa função deve
+                retornar as duas strings concatenadas ("juntadas") separadas por um espaço. Utilize
+                document.write para escrever na tela o resultado desta função com os parâmetros de teste "Olá"
+                e "Mundo!"*/
+
+      function olaMundo(string1, string2) {
+        document.write(string1 + string2);
+      }
+
+      olaMundo('ola', ' mundo');
+
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      /* 2. Saudação com nome: Crie uma função que recebe como parâmetro o nome de uma pessoa. Essa
+          função deve retornar o texto em duas linhas distintas: "Olá {nome}." "Tudo bem {nome}?". Utilize
+          document.write para escrever na tela o resultado desta função com os parâmetros a sua escolha.
+                */
+      function saudacao(nome) {
+        document.write('Olá' + ' ' + nome + ' tudo bem?');
+      }
+
+      saudacao('norma');
+
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      /*3.Resto 9: Crie uma função que recebe como parâmetro um número.
+          Essa função deve retornar o
+          texto "O resto de {numero} divididos por 9 é: {resto da divisão}".
+          Utilize document.write para
+          escrever na tela o resultado desta função com os parâmetros a sua escolha.*/
+
+      function restoDaDivisao(numero) {
+        var restoDaDivisao = numero % 9;
+        return 'O resto de ' + numero + ' divididos por 9 é:' + restoDaDivisao;
+      }
+
+      var resto = restoDaDivisao(28);
+      document.write(resto);
+
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      /*O motorista: Crie uma função que recebe 2 parâmetros: a idade do usuário e
+         a idade em que é
+      permitido dirigir em algum país. Essa função deve retornar o texto "você pode
+       dirigir" caso a
+      idade do usuário seja maior ou igual a estabelecida para direção no país e
+      "você não pode
+      dirigir" caso contrário. Utilize document.write para escrever na tela o resultado
+       desta função com
+      os parâmetros a sua escolha. Teste todas as saídas possíveis.*/
+
+      function testaIdadeParaDirigir(idadeUsuario, idadeParaDirigir) {
+        if (idadeUsuario >= idadeParaDirigir) {
+          return 'você pode dirigir';
+        } else return 'voce não pode dirigir';
+      }
+
+      var g1 = testaIdadeParaDirigir(35, 18);
+      document.write(g1);
+
+      function mostra(frase) {
+        document.write(frase + '<br>');
+      }
+
+      function testaIdadeParaDirigirMostraNaTela(
+        idadeUsuario,
+        idadeParaDirigir
+      ) {
+        var possoDirigir = testaIdadeParaDirigirMostraNaTela(
+          idadeUsuario,
+          idadePermitida
+        );
+
+        mostra(possoDirigir);
+      }
+
+      /* var idadeUsuario = prompt('Qual é a sua idade?') */
+
+      var idadeGabriel = 20;
+      var idadeNorma = 50;
+      var idadeAllan = 18;
+
+      var idadeMinimaPradirigirnoBrasil = 18;
+      var idadeMinimaPradirigirnoBelgica = 21;
+
+      testaIdadeParaDirigirMostraNaTela(
+        idadeUsuario,
+        idadeMinimaPradirigirnoBrasil
+      );
+
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      /*Bebedeira: Crie uma função que recebe 2 parâmetros:
+      a idade do usuário e a idade em que é
+      permitido beber em algum país. Essa função deve retornar o
+      texto "você pode beber" caso a
+      idade do usuário seja maior ou igual a estabelecida para
+      consumo de bebidas alcoólicas no país
+      e "você não pode beber" caso contrário. Utilize document.
+      write para escrever na tela o resultado
+      desta função com os parâmetros a sua escolha. Teste todas
+      as saídas possíveis.*/
+
+      function testaIdadeParaBeber(idadeUsuario, idadeParaBeber) {
+        if (idadeUsuario >= idadeParaBeber) {
+          return 'você pode beber';
+        } else return 'voce não pode beber';
+      }
+
+      var g2 = testaIdadeParaBeber(30, 18);
+      document.write(g2);
+
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      /*Semáforo: faça uma função que recebe como parâmetro as strings "verde", "amarelo" ou
+      "vermelho". Caso o parâmetro passado seja "verde", a função deve retornar "pode passar!", caso
+      seja "amarelo", retorna "melhor freiar", caso seja "vermelhor", "pare já!". Utilize document.write
+      para escrever na tela o resultado desta função com os parâmetros a sua escolha. Teste todas as
+      saídas possíveis.*/
+
+      function ligaSemaforo(luz) {
+        var resultado = '';
+
+        if (luz == 'verde') {
+          resultado = 'Pode passar';
+        } else if (luz == amarela) {
+          resultado = 'Melhor freiar';
+        } else if (luz == vermelha) {
+          resultado == 'pare já';
+        }
+
+        return resultado;
+      }
+      document.write(ligaSemaforo('verde') + '<br>');
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      function menu(pedido1, pedido2, pedido3) {
+        document.write('O pedido é:' + pedido1 + '<br>');
+        document.write('O pedido é:' + pedido2 + '<br>');
+        document.write('O pedido é:' + pedido3 + '<br>');
+      }
+
+      menu('refrigerante ', 'suco ', 'agua');
+      var numeroDoPedido = prompt('1-refrigerante\n2 2-suco\n2 3-agua\n2');
+
+      document.write(menu('refrigerante ', 'suco ', 'agua'));
+      /*porque e indefinido esse trecho de codigo?*/
+
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+    </script>
+  </body>
+</html>

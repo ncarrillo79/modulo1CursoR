@@ -1,0 +1,45 @@
+body {
+  font-family: verdana ,sans-serif;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+div#calculator {
+  width: 300px;
+  background-color:#4682B4;
+  padding:  20px;
+  border-radius: 6px;
+  margin-top: 70px;
+}
+
+div#display {
+  padding: 5px;
+  font-size: 30px;
+  text-align: right;
+  background-color:#D3D3D3;
+  margin: 10px 0;
+  border-radius: 4px;
+  height: 30px;
+  display: block;
+}
+
+div#keyboard{
+  display: grid;
+  grid-template-columns: repeat( 4, 1fr);
+  grid-gap: 10px;
+}
+#keyboard button {
+  padding: 14px;
+  font-size: 18px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+#quartaColuna {
+  background-color: #FFA500;
+}
+button:hover {
+  background-color: #C0C0C0;
+}

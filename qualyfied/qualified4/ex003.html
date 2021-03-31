@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrayDiff</title>
+  </head>
+  <body>
+    <script>
+      // Seu objetivo neste desafio é implementar uma função de diferença, que subtrai uma lista da outra e retorna o resultado.
+
+      // Ele deve remover todos os valores da lista a, que estão presentes na lista b.
+
+      // arrayDiff([1,2],[1]) == [2]
+      // Se um valor estiver presente em b, todas as suas ocorrências devem ser removidas de a:
+
+      // arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+      function arrayDiff(a, b) {
+        a.forEach((element) => {
+          for (let i = 0; i < b.length; i++) {
+            let retira = a.indexOf(b[i]);
+            if (retira > -1) {
+              a.splice(retira, 1);
+            }
+          }
+        });
+
+        return a;
+      }
+      arrayDiff([1, 2, 2, 2, 3], [2]);
+
+      var res = arrayDiff([1, 2, 2, 2, 4, 4, 3], [2]);
+
+      console.log(res);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <title>
+            Formulário de Inscrição
+        </title>
+    
+        <header class="cabecalho">
+            <h1 class="font-logo">
+            <br>   RESILIA
+            </h1>
+        </header>
+        
+        <body background="backgrund.jpg">
+            <br><br><br>
+            <h2 class="texto-processo-seletivo">
+                Processo seletivo Resília 2020, increva-se você também!
+            </h2><br><br><br>
+
+    <section class="sessao-formulario" >
+        <div class="div1">
+                <form action="cadastro.php" method="POST">
+                <p>
+                    <legend class="legenda">INFORMAÇÕES PESSOAIS</legend><br><br>
+                    Nome completo:<br><br><input type="text" name="nome-completo" required autofocus><br><br>
+                    Data de nascimento:<br><br><input type="date" name="data-de-nascimento"><br><br>
+                    CPF:<br><br><input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" size="11"><br><br><br>
+                    <input type="submit" name="btn-enviar" value="Inscrever">
+                </p>   
+                </form>
+             </div>            
+    </section>            
+
+        </body>
+    </head>
+</html>

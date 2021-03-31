@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex05</title>
+  </head>
+  <body>
+    <script>
+      /*Retorne o array de strings recebido pela função em ordem alfabética,
+       desconsiderando letras maiúsculas e minúsculas
+      
+        Por exemplo:
+
+        ["Hello", "there", "I'm", "fine"]  -->  ["fine", "Hello", "I'm", "there"]
+        ["C", "d", "a", "B"])              -->  ["a", "B", "C", "d"]
+
+ */
+
+      sortme = function (names) {
+        // var upperCase=>{
+        names.sort((a, b) => {
+          return a.toLowerCase().charCodeAt() - b.toLowerCase().charCodeAt();
+        });
+
+        return names;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>varios</title>
+  </head>
+  <body>
+    <script>
+      //comprobar si una subcadena se env=cuentra en una cadena
+
+      let cadena1 = 'javaScript e maravilhoso';
+      console.log(cadena1);
+      console.log(cadena1.indexOf('Script')); //retorna 4
+      console.log(cadena1.indexOf('e')); //retorna11
+
+      //Determinar si una Cadena de Caracteres Empieza con una Palabra Específica
+
+      let cadena = 'javaScript e maravilhoso';
+      console.log(cadena);
+      console.log(cadena.startsWith('java')); //retorna true
+
+      //encontrar la posicion en que se encuentra una palabra
+
+      let cadena3 = 'la version javascript';
+      let indice = cadena3.indexOf('javascript'); //retorna 10
+      console.log(indice);
+
+      //Obtener una Sección de una Cadena de Caracteres a través de slice
+      var cadena4 = 'javaScript es un lenguaje de programacion';
+
+      console.log(cadena4.slice(3)); //retorna 'aScript es un lenguaje de programacion'
+      console.log(cadena4.slice(3, 7)); //retorna aScr
+      console.log(cadena4.slice(-13)); //retorna programacion
+      console.log(cadena4.slice(cadena4.indexOf('es'), -16));
+    </script>
+  </body>
+</html>

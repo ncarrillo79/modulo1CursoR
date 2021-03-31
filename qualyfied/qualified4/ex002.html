@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qualified04_ex002_SomaMista</title>
+  </head>
+  <body>
+    <!---Dado um array de inteiros como strings e números, retorne a soma dos valores do array como se todos os itens fossem números
+
+Sua resposta deve retornar um número. 
+exemplo:
+Test.assertEquals(somaMista(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 42); 
+
+-->
+    <script>
+      function somaMista(num) {
+        let soma = 0;
+        for (let indice of num) {
+          soma += parseInt(indice);
+        }
+        return soma;
+      }
+
+      var res = somaMista(['5', '0', 9, 3, 2, 1, '9', 6, 7]);
+
+      console.log(res);
+    </script>
+  </body>
+</html>

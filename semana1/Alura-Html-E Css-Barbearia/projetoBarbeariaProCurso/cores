@@ -1,0 +1,20 @@
+abcdef
+
+numérico 0123456789
+
+hexadecimal 0123456789ABCDEF
+
+RGB Red Green Blue
+
+#_ _ _ _ _ _ _ _
+
+0=ausencia de cor
+F=Maxima cor
+F =Maximo
+
+
+RGB=0,1,2,3,...255
+0=ausência
+255=mâximo
+
+rgb(255,255,255)

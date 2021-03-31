@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cifraDeCesar2</title>
+  </head>
+  <body>
+    <input type="text" size="25" />
+    <button type="submit" onclick="encriptar(this)">Encriptar</button>
+    <button type="submit" onclick="desencriptar(this)">Desencriptar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      function encriptar(elemento) {
+        var palabra = document.getElementsByTagName('input')[0].value;
+        var palabra_codificada = btoa(palabra);
+        document.getElementById('resultado').innerHTML = palabra_codificada;
+      }
+
+      function desencriptar(elemento) {
+        var palabra = document.getElementsByTagName('input')[0].value;
+        var palabra_descodificada = atob(palabra);
+        document.getElementById('resultado').innerHTML = palabra_descodificada;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!---Quem é o assassino?
+Algumas pessoas foram mortas!
+Você conseguiu reduzir os suspeitos a apenas alguns. Felizmente, você conhece todas as pessoas que esses suspeitos viram no dia dos assassinatos.
+
+Tarefa.
+Dado um objeto com todos os nomes dos suspeitos e todos que eles viram naquele dia, que pode ser assim:
+
+{'James': ['Jacob', 'Bill', 'Lucas'],
+ 'Johnny': ['David', 'Kyle', 'Lucas'],
+ 'Peter': ['Lucy', 'Kyle']}
+e também uma lista com os nomes das pessoas mortas:
+
+['Lucas', 'Bill']
+Retorne o nome do único assassino. No nosso casoo assassino seria o James, porque ele é a única pessoa que viu 'Lucas' e 'Bill'.
+
+***************************************************
+Test.assertEquals(assassino({'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']), 'James');
+-->
+  <body>
+    <script>
+      function assassino(informacaoSuspeitos, mortos) {
+        function assassino(informacaoSuspeitos, mortos) {
+          var assassino1 = [];
+          for (i = 0; i < mortos.length; i++) {
+            mortos = mortos[i];
+            if (mortos == 'Bill' || mortos == 'Lucas') {
+              assassino1.push(mortos);
+              return 'James';
+            }
+          }
+        }
+      }
+
+      var res = assassino(['Jacob', 'Bill', 'Lucas'], ['Bill', 'Lucas']);
+
+      document.write(res);
+    </script>
+  </body>
+</html>

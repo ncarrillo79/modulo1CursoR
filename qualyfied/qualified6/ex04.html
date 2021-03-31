@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex04</title>
+  </head>
+  <body>
+    <script>
+      /*Narcisista, eu?
+      Um Número Narcisista é um número positivo que é igua a soma de seus próprios dígitos, cada um elevado à potência do número de dígitos em uma determinada base.
+
+      Por exemplo, para verificar se o número 153 (3 digits) se enquandra nesse caso, fazemos:
+
+          1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+      e pra 1634 (4 digits):
+
+          1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634
+      O desafio
+      Seu código deve retornar true caso o número seja um número narcisista, ou false caso contrário.
+
+      Você não precisa se preocupar em verificar sua entrada!
+      Sua função irá receber como entrada apenas números inteiros positivos!*/
+
+      const narcisista = (numero) => {
+        // Codigo deve retornar true ou false
+
+        //convertimos o numero em string para poder percorre numero
+        let cadeiaString = numero.toString();
+        let suma = 0;
+
+        //percorrer cadeiaString um a um caráter
+
+        for (let i = 0; i < cadeiaString.length; i++) {
+          //depois temos que convertir o caracter num inteiro
+
+          let numeroInteiro = parseInt(cadeiaString[i]);
+          numeroElevado = numeroInteiro ** cadeiaString.length;
+
+          suma += numeroElevado;
+        }
+        if (suma == numero) return true;
+        else return false;
+      };
+
+      var res = narcisista(200);
+    </script>
+  </body>
+</html>

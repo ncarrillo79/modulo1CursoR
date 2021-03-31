@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel ="stylesheet" href = "style.css">
+  <script src = "calculadora.js" defer></script>
+  <title>Calculator</title>
+</head>
+<body>
+  <div id = "calculator">
+    <div id = "display"></div>
+    <div id = "keyboard">
+      <button onclick="calculator.apagarUltimoDigito()" value= ""><</button>
+      <button onclick="calculator.limparDisplay(value)" value= "" >C</button>
+      <button onclick="calculator.mostrarVisor(value)" value= "%" >%</button>
+      <button onclick="calculator.mostrarVisor(value)" value= "/" id = "quartaColuna" >÷</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 7 >7</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 8 >8</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 9 >9</button>
+      <button onclick="calculator.mostrarVisor(value)" value= "*" id = "quartaColuna">x</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 4>4</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 5 >5</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 6>6</button>
+      <button onclick="calculator.mostrarVisor(value)" value= "-" id = "quartaColuna">-</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 1>1</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 2 >2</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 3>3</button>
+      <button onclick="calculator.mostrarVisor(value)" value= "+" id = "quartaColuna">+</button>
+      <button onclick="calculator.mostrarVisor(value)" value= "-">+/-</button>
+      <button onclick="calculator.mostrarVisor(value)" value= 0>0</button>
+      <button onclick="calculator.mostrarVisor(value)" value= ".">,</button>
+      <button onclick="calculator.calculaValores()" value= "=" id = "quartaColuna">=</button>
+
+    </div>
+  </div>
+</body>
+</html>

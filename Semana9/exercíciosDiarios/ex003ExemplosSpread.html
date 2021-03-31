@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso de Spread</title>
+  </head>
+  <body>
+    <div>Texto1</div>
+    <div>Texto2</div>
+    <div>Texto3</div>
+    <script>
+      //queremos guardar el conteudo de esses textos em um array
+      const elementos = document.querySelectorAll('div');
+      console.log(elementos);
+      const textoDeElementos = [...elementos].map((elementos) => {
+        return (elementos.innerHTML = 'hola Norma');
+      });
+
+      console.log(textoDeElementos);
+      //**********************************************
+      function sumar(...numeros) {
+        var suma = 0;
+        numeros.forEach((numero) => {
+          suma += numero;
+        });
+        return suma;
+      }
+      console.log(sumar(3, 6, 7, 6, 9));
+
+      //*****************************
+
+      // function formatar(nombre, ciudad, telefono) {
+      //   return `${nombre} vive en ${ciudad} y su telefono es ${telefono}`;
+      // }
+      // ar1 = ['andres', 'Bogota', 34567895]; //Retorna alicia,paris,34567895 vive enundefined y su telefono es undefined esto esta errado, se soluciona con apply
+      // ar1 = ['juan', 'lima', 34567895];
+      // ar1 = ['alicia', 'paris', 34567895];
+
+      function formatar(nombre, ciudad, telefono) {
+        return `${nombre} vive en ${ciudad} y su telefono es ${telefono}`;
+      }
+      ar1 = ['andres', 'Bogota', 34567895];
+      ar2 = ['juan', 'lima', 34567895];
+      ar3 = ['alicia', 'paris', 34567895];
+
+      console.log(formatar.apply(null, ar2));
+
+      //con Spread es mas simples
+
+      function formatar(nombre, ciudad, telefono) {
+        return `${nombre} vive en ${ciudad} y su telefono es ${telefono}`;
+      }
+      ar1 = ['andres', 'Bogota', 34567895];
+      ar2 = ['juan', 'lima', 34567895];
+      ar3 = ['alicia', 'paris', 34567895];
+
+      console.log(formatar(...ar3));
+
+      ///****************capturar parametros restantes de una funcion*******
+
+      function frutasDelDia(fruta1, fruta2, ...outras_frutas) {
+        var frutas = `Olá, para hoje temos ${fruta1} e ${fruta2} como frutas frincipais`;
+
+        if (outras_frutas.length > 0) {
+          frutas += ' ,como frutas secudarias temos: ';
+
+          outras_frutas.forEach((frutinhas) => {
+            frutas += frutinhas + ', ';
+          });
+        }
+        return frutas;
+      }
+
+      console.log(frutasDelDia('maça', 'pera', 'coco', 'fresa', 'manga'));
+
+      //**************copias de objetos e arrays
+      //queremos copiar estos dois elementos e modificar essas copias , depois vamos aimprimir para ver que estamos fazendo uma copia real dos objetos
+
+      var numeros = [34, 56, 2, 257, 14]; //array
+
+      var conexao = {
+        //objeto literal
+        host: '127.0.0.1',
+        port: 1234,
+        db: 'test',
+        pass: '201$',
+      };
+
+      numeros2 = [...numeros]; //aqui lo que estamos fazendo é desempacotar os elementos da variavel número dentro desse novo array
+
+      var conexao2 = { ...conexao };
+
+      numeros2.push(1);
+      conexao2.user = 'norma';
+      console.log(numeros);
+      console.log(numeros2);
+      console.log(conexao);
+      console.log(conexao2);
+
+      /**********CONCATENAR OBJETOS Y ARRAYS**************/
+      var colores1 = ['azul', 'verde', 'rojo'];
+      var colores2 = ['cafe', 'rosa', 'blanco'];
+
+      var datos1 = {
+        nome: 'norminha',
+        idade: 50,
+        estatura: 1.65,
+      };
+
+      var datos2 = {
+        sobrenome: 'Carrillo',
+        pais: 'Venezuela',
+        sexo: 'F',
+      };
+
+      //queremos unir las dos arrays y fazer o mesmo com os objetos
+
+      var colores = [...colores1, ...colores2];
+      var persona = { ...datos1, ...datos2 };
+      //var persona = [...datos1, ...datos2];
+
+      console.log(colores);
+      console.log(persona);
+
+      //****OUTRA FORMA DE FAZER O EXEMPLO DE ACIMA SEM FAZER CONCATENACAO*******
+      var colores1 = ['azul', 'verde', 'rojo'];
+      var colores2 = ['cafe', 'rosa', 'blanco', ...colores1];
+
+      var datos1 = {
+        nome: 'norminha',
+        idade: 50,
+        estatura: 1.65,
+      };
+
+      var datos2 = {
+        sobrenome: 'Carrillo',
+        pais: 'Venezuela',
+        sexo: 'F',
+        ...datos1,
+      };
+
+      console.log(colores2);
+      console.log(datos2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex001</title>
+  </head>
+  <body>
+    <script>
+      /*
+                Defina uma função que remove duplicatas de um array de números e retorne o array sem duplicatas como resultado.
+
+                A ordem da sequencia em que os números aparecem devem ser a mesma do array original.
+
+                filterDuplicatesArray(array)
+                [1,2,2,4,4,1,1,1]=>[1,2,4]]
+                    */
+      //arr = [1, 2, 2, 4, 4, 1, 1, 1];
+      function distintos(arr) {
+        var array = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr.indexOf(arr[i]) == i) {
+            array.push(arr[i]);
+          }
+        }
+
+        return array;
+      }
+
+      var res = distintos([1, 2, 2, 4, 4, 1, 1, 1]);
+
+      document.write(res);
+      console.log(res);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>fibonacci</title>
+  </head>
+  <body>
+    <script>
+      var limit = 10;
+
+      var fib = [0, 1];
+
+      for (i = 2; i < limit; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+
+        document.write(fib[i]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Imput DOM</title>
+  </head>
+  <body>
+    <form id="form">
+      <input type="email" placeholder="correio" name="email" />
+    </form>
+    <button id="btn">Agregar</button>
+
+    <script>
+      $('#btn').addEventListener('click', function () {
+        var input = document.createElement('input');
+        input.setAttribute('type', 'email');
+        input.setAttribute('placeholder', 'email');
+        input.setAttribute('placeholder', 'email');
+        $('#form').appendChild(input);
+        console.log(input);
+      });
+
+      function $(selector) {
+        return document.querySelector(selector);
+      }
+    </script>
+  </body>
+</html>

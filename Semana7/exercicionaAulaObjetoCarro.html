@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objeto Carro</title>
+  </head>
+  <body>
+    <script>
+      let carro = {
+        combustivel: 0,
+        ligado: false,
+        ligar: function () {
+          if (this.combustivel == 0) {
+            console.log('sem combustivel');
+            this.ligado = false;
+          } else {
+            this.ligado = true;
+          }
+        },
+        acelerar: function () {
+          if (this.combustivel == 0) {
+            //console.log(sem combustivel);
+            this.ligado = false;
+            return 'Sem combustivel';
+          }
+          if (this.ligado == true) {
+            this.combustivel--;
+          } else {
+            console.log('carro desligado');
+          }
+        },
+      };
+    </script>
+  </body>
+</html>

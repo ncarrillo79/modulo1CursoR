@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NossoArrayAula43</title>
+  </head>
+  <body>
+    <script>
+      class NossoArray {
+        // Recebemos um array no construtor
+        constructor(array) {
+          // Salvamos como atributo
+          this._array = array;
+        }
+
+        // Recebe um callback
+        paraTodos(callback) {
+          // Passa por todos os elementos
+          for (let i = 0; i < this._array.length; i++) {
+            // Captura o elemento
+            let elemento = this._array[i];
+
+            // Passa o elemento pro callback
+            callback(elemento);
+          }
+        }
+
+        // Recebe um callback e um valor inicial opcional
+        redutor(callback, valorInicial = 0) {
+          // Começamos com o valor inicial recebido
+          let acumulado = valorInicial;
+
+          for (let elementoAtual of this._array) {
+            console.log(
+              `Passei o ${acumulado} e o ${elementoAtual} para a maquininha`
+            );
+
+            // Valor acumulado = retorno da função de callback
+            acumulado = callback(acumulado, elementoAtual);
+
+            console.log(
+              `Após a minha maquininha calcular, o valor acumulado é ${acumulado}`
+            );
+          }
+
+          return acumulado;
+        }
+
+        // Implemente o seu map aqui
+        mapeador(/* ... */) {
+          // ...
+
+          return [];
+        }
+      }
+
+      // Nova instância do nosso array
+      let a = new NossoArray([10, 11, 12]);
+
+      // "Foreach" com callback que mostra todos os elementos no console
+      let valor = a.paraTodos((elementoAtual) => console.log(elementoAtual));
+
+      // "Reduce" com callback de multiplicação
+      let valor = a.redutor(
+        (acumulado, elementoAtual) => acumulado * elementoAtual,
+        1
+      );
+      console.log(valor);
+
+      // Mapeador
+      let arrayMapeado = a.mapeador(/* ... */);
+      console.log(arrayMapeado);
+    </script>
+  </body>
+</html>

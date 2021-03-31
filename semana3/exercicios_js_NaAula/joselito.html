@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaranjasDeJoselito</title>
+  </head>
+  <body>
+    <script>
+      document.write('<br>');
+      document.write(
+        '**********************************************************************************'
+      );
+      document.write('<br>');
+      document.write(
+        '*********************************************************************************'
+      );
+      document.write('<br>');
+
+      function divisaoDasLaranjas(quantasLaranjas, quantosVizinhos) {
+        var resto = quantasLaranjas % quantosVizinhos;
+
+        //var vizinhos = (quantasLaranjas - resto) / quantosVizinhos;
+
+        var vizinhos = Math.trunc(quantasLaranjas / quantosVizinhos);
+
+        return (
+          'Para o joselito sao ' +
+          resto +
+          ' laranjas e os vizinhos ficaram com ' +
+          vizinhos +
+          '<br>'
+        );
+      }
+
+      document.write(divisaoDasLaranjas(7, 3));
+    </script>
+  </body>
+</html>

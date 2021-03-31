@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //https://youtu.be/MMUWeDOtyN0
+
+      //Basados en prototipos
+      //Object.prototype es el prototipo raíz de javascript
+      //cada vez que creamos un objeto este es asociado con un prototipo
+      //****************************************
+      // function Carro(marca, modelo) {
+      //   this.marca = marca;
+      //   this.modelo = modelo;
+      // }
+      // let car1 = new Carro('mercedes', 1991);
+      // let car2 = new Carro('bmw', 1965);
+
+      // car1.marca;
+      // car1['marca'];
+
+      //car1=>Prototipo=>Object(raíz)
+      //****************************************
+      // function Carro(marca, modelo) {
+      //   this.marca = marca;
+      //   this.modelo = modelo;
+      // }
+
+      // Carro.prototype.encender = function () {
+      //   return 'o carro ta ligado';
+      // };
+      // let car2 = new Carro('mercedes', 1991);
+      // car2.encender(); // el carro esta encendido
+
+      //****************************************
+
+      Array.prototype.multiply = function () {
+        let result = 1;
+        for (let i = 0; i < this.length; i++) {
+          result = result * this[i];
+        }
+        return result;
+      };
+
+      [1, 2, 3].multiply(); // retorna 6()
+    </script>
+  </body>
+</html>

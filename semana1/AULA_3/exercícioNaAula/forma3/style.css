@@ -1,0 +1,41 @@
+#container {
+  width: 100;
+  min-width: 200px;
+  height: 100%;
+  margin-left: 250px;
+}
+
+#container hr {
+  text-align: center;
+}
+
+#container h1 {
+  text-align: center;
+}
+
+div {
+  width: 350px;
+  height: 200px;
+  float: lef;
+  padding-left: 15px;
+  border-radius: 15px;
+}
+
+.amarelo {
+  display: flex;
+  background-color: yellow;
+}
+
+.azul {
+  background-color: blue;
+  display: flex;
+}
+.vermelho {
+  background-color: red;
+  display: flex;
+}
+
+.laranja {
+  background-color: orange;
+  display: flex;
+}

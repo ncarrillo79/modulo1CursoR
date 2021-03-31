@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Desafioula16Metodo02</title>
+  </head>
+  <body>
+    <script>
+      function createButtons() {
+        let name = [
+          'vinicius',
+          'norma',
+          'erica',
+          'thome',
+          'David',
+          'erica2',
+          'jose',
+          'luiza',
+        ];
+        var i = 0;
+        while (i < name.length) {
+          let btn = document.createElement('button');
+          btn.textContent = name[i];
+          // btn.id = 'button' + i;
+          document.body.appendChild(btn);
+          btn.addEventListener('click', function () {
+            alert('Olá ' + btn.textContent);
+          });
+          i++;
+        }
+      }
+      createButtons();
+    </script>
+    <input class="nome" />
+  </body>
+</html>

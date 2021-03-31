@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width"=, initial-scale=1.0" />
+    <title>semaforo</title>
+  </head>
+  <body>
+   <p>
+     ********************************************************** <br>
+      Semáforo: faça uma função que recebe como parâmetro as strings "verde", "amarelo" ou
+       "vermelho". Caso o parâmetro passado seja "verde", a função deve retornar "pode passar!", caso
+       seja "amarelo", retorna "melhor freiar", caso seja "vermelhor", "pare já!". Utilize document.write
+       para escrever na tela o resultado desta função com os parâmetros a sua escolha. Teste todas as
+       saídas possíveis. <br>
+       *******************************************************
+      </p>
+
+       
+       <script>
+      function ligaSemaforo(luz) {
+        var mensagem = '';
+
+        if (luz == 'verde') {
+          mensagem = 'Pode passar';
+        } else if (luz == 'vermelho') {
+          mensagem = 'Pare';
+        } else if (luz == 'amarela') {
+          mensagem = 'Atenção';
+        } else {
+          mensagem = 'qu é isso?';
+        }
+        return mensagem;
+      }
+
+      document.write(ligaSemaforo(prompt('qual é a luz')));
+    </script>
+  </body>
+</html>
+
+    </script>
+  </body>
+</html>

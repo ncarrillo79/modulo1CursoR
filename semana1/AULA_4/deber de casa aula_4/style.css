@@ -1,0 +1,62 @@
+body{
+background-color: #000000;
+}
+
+#banner {
+  width: 100%;  
+}
+
+.principal{
+    background-color: #CCCCCC;
+    padding: 30px;
+
+}
+
+.titulo-principal{
+
+    padding-left: 20px;
+    color: white;
+}
+
+.titulo-centralizado{
+    text-align: center
+}
+
+#sobre {
+    font-size: 20px
+}
+
+p {
+    text-justify: auto;
+    
+}
+
+em strong{
+    color:#FF0000}
+
+.itens{
+    font-style: italic;
+    font-size: 30px;
+}
+
+.apreendido{
+    background-color:#000000 ;
+    padding: 20px;
+    color: white;
+}
+
+
+ul{
+
+display: inline-block;
+vertical-align: top;
+width: 20%;
+margin-right: 15%;
+color:white ;
+
+}
+
+.imagemapreendido{
+    width: 50%;
+}
+

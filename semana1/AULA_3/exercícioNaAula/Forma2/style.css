@@ -1,0 +1,63 @@
+.cabeçalho{
+    border:solid black
+}
+
+body{
+  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div h1{
+    color: blue;
+    align-content: flex-start;
+    
+}
+
+div ul{
+    color:blue;
+    text-align: right;
+}
+
+
+.forcas{
+    background: rgb(179, 255, 0);
+    width: 50%;
+    height: 200px;
+    float: left;
+    
+  
+
+}
+
+.fraquezas{
+    background:mediumspringgreen;
+    width: 50%;
+    height: 200px;
+    float: left;
+} 
+
+.oportunidades{
+    background-color: rgb(255, 30, 0);
+    width: 50%;
+    height: 200px;
+    float: left;
+  
+  
+}
+
+.ameacas{
+    background-color: rgb(255, 0, 255);
+    width: 50%;
+    height: 200px;
+    float: left;
+   
+    
+}
+

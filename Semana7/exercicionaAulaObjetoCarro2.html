@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objeto Carro</title>
+  </head>
+  <body>
+    <script>
+      const carro = {
+        combustivel: 20,
+        tanque: 50,
+
+        acelerar: function () {
+          let acelerou = 10;
+          let noTanque = this.combustivel;
+
+          let oQueResta = noTanque - acelerou;
+          this.combustivel = oQueResta;
+          return `Agora o carro tem${oQueResta} de combustivel`;
+        },
+      };
+    </script>
+  </body>
+</html>

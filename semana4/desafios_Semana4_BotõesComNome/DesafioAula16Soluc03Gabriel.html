@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DesafioAula16Soluc03</title>
+  </head>
+  <body>
+    <script>
+      var botoes = ['salve', 'Galera', 'Tudo', 'Bem', 'Uau'];
+
+      function criaBotao(texto) {
+        //inicio abertura da Tag
+        var novoBotao =
+          '<button class="resize"onclick="alert(' +
+          texto +
+          ')">' +
+          texto +
+          '</button><br>';
+        return novoBotao;
+      }
+      //variavel que vamos a usar para passar pela posicao da lista
+      var indiceElemento = 0;
+
+      //se ainda não chegamos
+      while (indiceElemento < botoes.length) {
+        //accesa o nome do botão e salva na variavél
+
+        var elemento = botoes[indiceElemento];
+
+        //cria botão
+        var botao = criaBotao(elemento);
+
+        //Escreve o botão na tela
+        document.write(botao);
+
+        //incrementa
+        indiceElemento++;
+      }
+    </script>
+  </body>
+</html>

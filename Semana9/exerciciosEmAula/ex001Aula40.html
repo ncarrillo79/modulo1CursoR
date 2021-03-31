@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //       //Tarefa de aula: Método Spread
+      // 1. Dado o array e o código a seguir: Chame a função ola da forma certa, alterando o array e utilizando o spread operator
+
+      //let dados = ['Fulano'];
+
+      let dados = ['norma', 'Hola', '!'];
+      function ola(nomeDaPessoa, saudacao, pontuacao) {
+        console.log(saudacao + ' ' + nomeDaPessoa + pontuacao);
+      }
+      var res = ola(...dados);
+
+      /*. Dado o array a seguir:Utilize o método map para mostrar um array que contém área dos quadrados respectivamente*/
+
+      let listaDeQuadrados = [
+        {
+          largura: 100,
+          altura: 100,
+        },
+        {
+          largura: 30,
+          altura: 10,
+        },
+        {
+          largura: 20,
+          altura: 13,
+        },
+        {
+          largura: 5,
+          altura: 5,
+        },
+        {
+          largura: 1,
+          altura: 1,
+        },
+      ];
+
+      //*********************************************/
+
+      const numeros = [1, 2, 3];
+      let numerosCopiados = [...numeros];
+
+      numerosCopiados[0] = 0;
+      console.log('numeros: ', numeros);
+      console.log('numerosCopiados: ', numerosCopiados);
+
+      //*******************************
+
+      const numeros2 = [1, 2, 3];
+      const otrosNumeros = [4, 5, 6];
+
+      console.log(numeros2.concat(otrosNumeros)); //esto lo podemos hacer con spread también
+      console.log([...numeros2, ...otrosNumeros]); //metodo Spread
+      console.log(['a', 0, ...numeros2, ...otrosNumeros, 7, 8, 'b']);
+      console.log([
+        'a',
+        0,
+        ...numeros2,
+        'separacion',
+        ...otrosNumeros,
+        7,
+        8,
+        'b',
+      ]); //podemos insertar otros elementos
+
+      //*****************UTILIZANDO OBJETOS***********************
+
+      const user = {
+        name: 'Norma',
+        id: 1234,
+      };
+
+      let copyOfUser = { ...user };
+
+      copyOfUser.web = 'Normita.com.ve';
+      console.log({ user });
+      console.log([copyOfUser]);
+
+      //*************ALTERNATIVA A Object.assign****************
+      const user2 = {
+        name: 'Norma',
+        id: 1234,
+      };
+
+      const userContact = {
+        twiter: '@normita',
+        mail: 'ncarrillo79@gmail.com',
+      };
+
+      const fullUser = Object.assign({}, user2, userContact); //Retorna {name: "Norma", id: 1234, twiter: "@normita", mail: "ncarrillo79@gmail.com"}
+      console.log(fullUser);
+
+      //Con Spread esto é mais legível
+      const fullUser2 = { ...user2, ...userContact }; //Também retorna //Retorna {name: "Norma", id: 1234, twiter: "@normita", mail: "ncarrillo79@gmail.com"}
+
+      console.log(fullUser2);
+
+      //podemos sobreescrever as propriedades com novos valores
+
+      const fullUser3 = {
+        ...user2,
+        ...userContact,
+        mail: 'outroemail@gmail.com',
+      };
+      console.log(fullUser3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ParentesePorPalavraRepetida</title>
+  </head>
+  <body>
+    <script>
+      //convierta un string dado a una nueva string donde cada caracter na nova string é um parenteses "(" se o caracter aparece uma vez só na string na string original, ou ")" se o caracter aparece mais de uma vez na string original. omita as letras maiśuculas se um caracter e duplicado.
+      /*exemplos:
+      "din" =>"((("
+      "recede"=>"()()()"
+      "Succes"=>")())())"
+      "((@"=>"))(("
+
+      referencias:
+      https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/from
+
+      */
+
+      function duplicateEncode(word) {
+        let returnString = '';
+        const charMap = {};
+
+        //percorrer a string original
+
+        Array.from(word).forEach((char) => {
+          char = char.toLowerCase();
+          //levar conta de cada um dos caracteres
+          if (!charMap[char]) {
+            charMap[char] = {
+              count: 1,
+            };
+          } else {
+            charMap[char].count++;
+          }
+        });
+        console.log(charMap);
+
+        //se o caracter aparece uma vez devolver "("
+        //se o caracter aparece mais de uma vez devolver ")"
+
+        for (let i = 0; i < word.length; i++) {
+          //aplicamos a função lowerCase  no word[i] pra que todos os caracteres fiquem minúsculos(loweCase) e essa variavel substitue aõ word[i]
+
+          let char = word[i].toLowerCase();
+          returnString += charMap[char].count > 1 ? ')' : '(';
+        }
+
+        //se o caracter aparece mais de uma vez, devolver ")"
+        //Retornar la nova string
+
+        return returnString;
+      }
+
+      console.log(duplicateEncode('bebe'));
+
+      //notas: charMap es un objeto:
+      //charMap son los caracteres de la String
+      // exemplo: "recede" o objeto  fica assim
+      //r,e,c,e,d,e são cada um dos charMap
+
+      // c: {count: 1}
+      // d: {count: 1}
+      // e: {count: 3}
+      // r: {count: 1}
+    </script>
+  </body>
+</html>

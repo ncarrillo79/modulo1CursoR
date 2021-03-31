@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //for loop é um dos métodos de iteração mais utilizados em JavaScript. Ele funciona de forma muito similar ao while loop.
+
+      /*Exemplo de while:
+
+function soma1_100(){
+  var sum=0,num=1
+  while (num<=100){
+    sum+=num;
+    num++;
+  }
+  return sum;
+}*/
+
+      function pickIt(arr) {
+        let impares = [];
+        let pares = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0) {
+            pares.push(arr[i]);
+          } else {
+            impares.push(arr[i]);
+          }
+        }
+
+        return [impares, pares];
+      }
+      var resultado = pickIt([1, 2, 3, 4, 5, 6]);
+      document.write(pickIt([1, 2, 3, 4, 5, 6]));
+      console.log(resultado);
+    </script>
+  </body>
+</html>

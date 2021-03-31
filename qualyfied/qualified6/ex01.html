@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex01</title>
+  </head>
+  <body>
+    <script>
+      /*
+      Será que o herói vai sobreviver?
+Um herói está a caminho do castelo para completar sua missão. No entanto, ele foi informado de que o castelo está cercado por dois dragões poderosos!
+Cada dragão precisa de 2 balas para ser derrotado, mas nosso destemido herói não tem ideia de quantas balas ele deve carregar
+Supondo que ele vai pegar um determinado número de balas e avançar para lutar contra outro número específico de dragões, conseguimos adivinhar se ele vai viver (ou morrer)?
+
+Retorne true caso ele fique vivo ou false caso ele tombe perante o dragão!
+      */
+
+      function heroi(balas, dragoes) {
+        var Qtybalas = balas;
+        var Qtydragoes = dragoes * 2;
+
+        if (Qtybalas >= Qtydragoes) return true;
+        else return false;
+      }
+    </script>
+  </body>
+</html>

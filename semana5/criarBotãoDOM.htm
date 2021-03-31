@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Criar Boton DOM</title>
+    <style>
+      body {
+        background-color: indianred;
+      }
+      #divobjetivo {
+        border: solid 2px green;
+        min-height: 30px;
+      }
+
+      button {
+        height: 38px;
+        border-radius: 12%;
+        color: greenyellow;
+        background-color: indigo;
+      }
+    </style>
+
+    <script>
+      function criaBoton() {
+        //let numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var btn = document.createElement('button');
+        //btn.type = 'button';
+        btn.textContent = 'sou um boton novo';
+        //btn.textContent = numero + [i];
+        document.getElementById('divobjetivo').appendChild(btn);
+      }
+      criaBoton();
+    </script>
+  </head>
+  <body>
+    <h1>Criar Botom usando DOM</h1>
+    <div id="divobjetivo"></div>
+    <button onclick="criaBoton()">Cria Boton</button>
+  </body>
+</html>

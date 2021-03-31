@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+Sua função maiorEMenor receberá uma string como parâmetro. Separe essa string utilizando o caracter de ' ' e retorne uma string contendo o maior número e o menor número (necessariamente nesta ordem).
+
+Exemplos
+Entrada	Saída
+"1 2 3 4 5"	"5 1"
+"1 2 -3 4 5"	"5 -3"
+"1 9 3 4 -5"	"9 -5"*/
+
+      function maiorEMenor(numbers) {
+        let numeros = numbers.split(' ');
+        numeros = numeros.filter((e) => String(e).trim());
+        for (let i = 0; i < numeros.length; i++) {
+          numeros[i] = parseInt(numeros[i]);
+        }
+        let max = Math.max.apply(null, numeros);
+        let min = Math.min.apply(null, numeros);
+
+        return max + ' ' + min;
+      }
+    </script>
+  </body>
+</html>

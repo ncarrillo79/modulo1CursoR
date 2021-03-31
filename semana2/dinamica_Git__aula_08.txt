@@ -1,0 +1,34 @@
+Dinâmica de Git com duas pessoas
+
+Requisitos:
+- Pessoa A e Pessoa B
+- Conta no GitHub
+
+DINÂMICA
+
+PARTE 1:
+
+- Pessoa A cria o repositório
+- Pessoa A envia um arquivo ola.txt para o repositório
+- Pessoa A adiciona pessoa B como colaborador do repositório
+- Pessoa B clona o repositório
+
+== Garantir que ambos estão na mesma branch e com o arquivo ==
+
+PARTE 2:
+
+- Pessoa A cria uma branch Edit-A a partir da branch principal e envia para o repositório remoto
+- Pessoa B cria uma branch Edit-B a partir da branch principal e envia para o repositório remoto
+
+== Garantir que as duas branches estão no GitHub ==
+
+PARTE 3:
+
+- Pessoa A modifica o arquivo ola.txt na branch Edit-A e envia as alterações para o repositório
+- Pessoa B modifica o arquivo ola.txt na branch Edit-B e envia as alterações para o repositório
+
+== Garantir que as alterações foram enviadas para as branches ==
+
+PARTE 4:
+
+- Merge? Próximas aulas!

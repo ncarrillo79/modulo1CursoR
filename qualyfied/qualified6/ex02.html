@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>ex02</title>
+  </head>
+  <body>
+    <script>
+      /*stamos construindo uma aplicação para uma equipe de astrônomos, e precisamos entregar algumas funcionalidades para eles. A tarefa do dia era construir uma função que receba um número inteiro positivo e retorne o nome de um planeta. Mas parece que deixaram alguns erros nela.
+
+Você consegue encontrar o problema e corrigir?
+
+nomePlaneta(3); // deveria retornar 'Terra'*/
+
+      function nomePlaneta(id) {
+        var nome;
+        switch (id) {
+          case 1:
+            nome = 'Mercúrio';
+            break;
+          case 2:
+            nome = 'Vênus';
+            break;
+          case 3:
+            nome = 'Terra';
+            break;
+          case 4:
+            nome = 'Marte';
+            break;
+          case 5:
+            nome = 'Júpiter';
+            break;
+          case 6:
+            nome = 'Saturno';
+            break;
+          case 7:
+            nome = 'Urano';
+            break;
+          case 8:
+            nome = 'Netuno';
+            break;
+        }
+
+        return nome;
+      }
+
+      console.log(nome);
+    </script>
+  </body>
+</html>

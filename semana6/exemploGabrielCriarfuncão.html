@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lâmpadas!</title>
+  </head>
+  <body>
+    <h1>Minha lâmpada não funciona!</h1>
+    <h2>O que fazer?</h2>
+
+    <script>
+      // ======================================================================================================================
+      //
+      // BLOCO 1: Criando a função de escrever na tela
+      //
+      // Descrição: Função que escreve uma frase no documento e quebra a linha
+      //
+      // Argumento 'frase': Esperamos receber um valor do tipo string
+      //
+      function escreveFrase(frase) {
+        document.write(frase + '<br>');
+      }
+      // ======================================================================================================================
+
+      // ======================================================================================================================
+      //
+      // BLOCO 2: Criando a função de trocar a lâmpada
+      //
+      // Descrição: Função que descreve o passo a passo de como trocar uma lâmpada de acordo com os valores passados
+      //
+      // Argumento 'lampadaPlugada': Esperamos receber um valor do tipo boolean
+      // Argumento 'bulboFunciona' : Esperamos receber um valor do tipo boolean
+      //
+      // Na hora de chamar a função, lembre-se da ordem dos argumentos e os valores que eles esperam receber!
+      //
+      //                     1º argumento     2º argumento
+      //                           |                |
+      //                           V                V
+      function trocaLampada(lampadaPlugada, bulboFunciona) {
+        escreveFrase('<strong> A lâmpada estava plugada? </strong>');
+
+        // Se a lâmpada estiver plugada (ou seja, lampadaPlugada for verdadeiro (true))
+        if (lampadaPlugada == true) {
+          escreveFrase('Sim!');
+          escreveFrase('<strong>O bulbo queimou?</strong>');
+
+          // Se o bulbo não estiver funcionando (ou seja, bulboFunciona for falso (false))
+          if (bulboFunciona == false) {
+            escreveFrase('Sim!');
+            escreveFrase('Troque o bulbo!');
+
+            // Senão, o bulbo está funcionando...
+          } else {
+            escreveFrase('Não!');
+            escreveFrase('Compre uma lâmpada nova!');
+          }
+
+          // Senão, a lâmpada não está plugada...
+        } else {
+          escreveFrase('Não!');
+          escreveFrase('Então plugue a lâmpada!');
+        }
+      }
+      // ======================================================================================================================
+
+      // ======================================================================================================================
+      //
+      // BLOCO 3: Chamando a função de trocar a lâmpada
+      //
+      // Experimente trocar os valores (use somente true e false) para ver resultados diferentes!
+      trocaLampada(true, true);
+      //               ^     ^
+      //               |     |______________
+      //   LEMBRE-SE   |                    |
+      //               |                    |
+      // -------------------                |
+      // |Este é o PRIMEIRO|                |
+      // |parâmetro da fun-|                |
+      // |ção! Leia o seu  |                |
+      // |nome para saber  |                |
+      // |quais valores vo-|                |
+      // |cê deve passar!  |                |
+      // -------------------                |
+      //                         -------------------
+      //                         |Este é o SEGUNDO |
+      //                         |parâmetro da fun-|
+      //                         |ção! Leia o seu  |
+      //                         |nome para saber  |
+      //                         |quais valores vo-|
+      //                         |cê deve passar!  |
+      //                         -------------------
+      // ======================================================================================================================
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Descrição
+Nesse desafio você receberá um array arr contendo números inteiros e strings.
+O objetivo é implementar a função filterList que retorna um array que contenha tudo presente no parâmetro arr que não seja do tipo string.
+
+Exemplo
+filterList([1,2,'a','b']) == [1,2]
+filterList([1,'a','b',0,15]) == [1,0,15]
+filterList([1,2,'aasf','1','123',123]) == [1,2,123]
+Documentação
+filterList(arr)
+Parametros:
+arr: Array
+Um array com números e strings
+
+Retorno: Array
+Um novo array sem as strings*/
+      function filterList(arr) {
+        let soNumero = [];
+
+        for (i = 0; i < arr.length; i++) {
+          let type = typeof arr[i];
+
+          if (type === 'number') {
+            soNumero.push(arr[i]);
+          }
+        }
+        return soNumero;
+      }
+    </script>
+  </body>
+</html>

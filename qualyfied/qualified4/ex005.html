@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>ex005winnerList</title>
+  </head>
+  <body>
+    <script>
+      //     Crie uma função que recebe dois argumentos:
+
+      // 1) Um array de objetos, onde cada objeto possui propriedades relativas a temporada, o time e o país vencedor da Liga dos Campeões.
+
+      // 2) País (uma string, por exemplo, 'Portugal')
+
+      // Sua função deve retornar o número de vezes que uma equipe de um determinado país ganhou. Retorne 0 se não houver vitórias.
+
+      // Por exemplo, se a matriz de entrada for a seguinte:
+
+      // const winnerList1 = [
+      //   {season: '1999-00', team: 'Real Madrid', country: 'Spain'},
+      //   {season: '2000-01', team: 'Bayern Munich', country: 'Germany'},
+      //   {season: '2001-02', team: 'Real Madrid', country: 'Spain'},
+      //   {season: '2002-03', team: 'Milan', country: 'Italy'},
+      //   {season: '2003-04', team: 'Porto', country: 'Portugal'}
+      // ]
+      // Os possíveis resultados possíveis são:
+
+      // countWins(winnerList1, 'Spain') => deve retornar 2
+      // countWins(winnerList1, 'Portugal') => deve retornar 1
+      // countWins(winnerList1, 'Sportland') => deve retornar 0
+
+      function countWins(winnerList, country) {
+        let contador = 0;
+        winnerList.forEach((element) => {
+          if (country == element.country) {
+            contador++;
+          }
+        });
+
+        return contador;
+      }
+
+      var res = countWins(
+        [
+          { season: '1999-00', team: 'Real Madrid', country: 'Spain' },
+          { season: '2000-01', team: 'Bayern Munich', country: 'Germany' },
+          { season: '2001-02', team: 'Real Madrid', country: 'Spain' },
+          { season: '2002-03', team: 'Milan', country: 'Italy' },
+          { season: '2002-03', team: 'Porto', country: 'Portugal' },
+        ],
+        'Spain'
+      );
+
+      console.log(res);
+    </script>
+  </body>
+</html>

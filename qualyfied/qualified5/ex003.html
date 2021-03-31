@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Bola normal ou Bola da Copa
+Nesse desafio, você deve criar uma classe Bola!
+Objetos do tipo bola devem aceitar um argumento para definir o tipo da bola quando esse objeto for instanciado.
+Se nenhum argumento for fornecido, objetos do tipo bola devem ser instanciados com o tipo de bola bola normal;
+
+bola1 = new Bola();
+bola2 = new Bola("Jabulani");
+
+bola1.tipoBola     //=> "bola normal"
+bola2.tipoBola     //=> "Jabulani"
+
+Test.assertEquals(new Bola().tipoBola, "bola normal");
+Test.assertEquals(new Bola("Jabulani").tipoBola, "Jabulani");
+
+-->
+
+    <script>
+      class Bola {
+        constructor(tipoBola='bola normal') {
+          this.tipoBola = tipoBola;
+        }
+      }
+
+      let bola1 = new Bola();
+      let bola2 = new Bola('jabulani');
+
+      console.log(bola2);
+    </script>
+  </body>
+</html>

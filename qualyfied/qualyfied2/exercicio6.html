@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Será dado um array de inteiros não negativos, sua tarefa é completar a série de zero até o maior número do array.
+
+Se os números da sequência não estiverem em ordem, você deverá ordená-los, mas se houver valores repetidos, você terá que retornar somente o valor zero no array, como neste exemplo:
+
+entradas        saídas
+[2,1]     ->  [0,1,2]
+[1,4,4,6] ->  [0]
+Lembre-se: todos os números são inteiros positivos.
+
+Esse é um exemplo das saídas esperadas para uma certa sequência de entrada
+
+entradas        saídas
+[0,1]   ->    [0,1]
+[1,4,6] ->    [0,1,2,3,4,5,6]
+[3,4,5] ->    [0,1,2,3,4,5]
+[0,1,0] ->    [0]*/
+
+      function completeSeries(arr) {
+        let resposta = [];
+        let repete = false;
+
+        //percorrer o vector e ver se temos repetição
+        var count = {};
+        arr.forEach(function (i) {
+          count[i] = (count[i] || 0) + 1;
+        });
+
+        for (let i = 0; i < arr.length; i++) {
+          if (count[arr[i]] > 1) {
+            repete = true;
+          }
+        }
+
+        if (repete == true) {
+          //Se repete: zera tudo
+          resposta = [0];
+        } else if (repete == false) {
+          //Se não repete: ordenar de 0 ao Maximo
+          let max = Math.max.apply(null, arr);
+          for (let i = 0; i < max + 1; i++) {
+            resposta.push(i);
+          }
+        }
+
+        console.log(resposta);
+        return resposta;
+      }
+    </script>
+  </body>
+</html>

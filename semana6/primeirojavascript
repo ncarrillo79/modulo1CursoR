@@ -1,0 +1,45 @@
+O primeiro arquivo .js
+Para dar início ao nosso projeto, vamos começar criando nosso primeiro arquivo Javascript, o principal.js, que vai conter o código inicial que faremos neste primeiro capítulo. Para manter uma boa organização de código crie o arquivo principal.js dentro da pasta /js. Sua estrutra de pastas deve ficar assim:
+
+introducao-javascript
+├── css
+│   ├── index.css
+│   └── reset.css
+├── js
+│   └── principal.js
+├── img
+├── favicon.ico
+└── index.html
+Importando o arquivo
+Claro que após criar um novo arquivo Javascript, não pode esquecer de importá-lo ao final da tag <body> em nosso HTML, utilizando a tag <script>:
+
+// Restante do código HTML
+            </section>
+        </main>
+        <!-- Importação dos Javascripts AQUI -->
+        <script src="js/principal.js"></script>
+    </body>
+</html>
+Repare que colocamos no atributo src o caminho relativo para nosso arquivo principal.js, ou seja a partir da pasta atual, vamos descer para a pasta js/ e em seguida linkar com arquivo.
+
+Trocando o título da página
+Para dar início aos nossos conhecimentos com o Javascript, vamos trocar o título da nossa página de Aparecida Nutrição para Aparecida Nutricionista, para praticar. Em nosso principal.js vamos:
+
+1- O primeiro passo é selecionar o elemento da página que queremos alterar, neste caso o :
+
+<h1>Aparecida Nutrição</h1>
+Sabemos que é possível selecionar um elemento através de sua tag, e como só temos este h1 na página poderíamos facilmente utilizá-lo, porém também vimos que não é uma boa prática utilizar um seletor de tag quando estamos selecionando um elemento do HTML, pois este h1 poderia facilmente ser trocado por um h2 e nosso código quebraria.
+
+Vamos adicionar uma classe no h1 para que a seleção do elemento sempre seja feita atráves desta classe:
+
+<h1 class="titulo">Aparecida Nutrição</h1>
+2- Agora que o h1 já tem uma classe, podemos utilizar a função seletora do Javascript que é responsável de trazer um elemento do mundo do HTML para o mundo do Javascript que é a querySelector(). Sabemos que queremos buscar na nossa página pelo h1, então vamos chamar a querySelector() na variável que representa a nossa página para o Javascript , o document:
+
+document.querySelector(".titulo");
+Como queremos manipular este elemento selecionado, vamos colocá-lo em uma variável de nome semântico para poder ter acesso a ele depois:
+
+var titulo = document.querySelector(".titulo");
+3- Por último, como queremos trocar o texto do h1, vamos acessar a propriedade textContent do elemento selecionado, que é a propriedade que tem o contéudo de texto daquela tag. Como queremos alterar o contéudo de texto daquela tag, vamos trocar o valor da propriedade textContent para um novo texto, que é o nosso novo título Aparecida Nutricionista:
+
+titulo.textContent = "Aparecida Nutricionista"
+Ao recarregar a página você deve ver que assim que a página é carregada o novo título já aparece no topo!

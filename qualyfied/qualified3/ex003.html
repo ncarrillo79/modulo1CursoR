@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>ex003</title>
+  </head>
+  <body>
+    <script>
+      /*
+                     Faça um programa que filtre um array de strings e retorna um array somente com o nome dos seus amigos.
+
+                  Se o nome tiver exatamente 4 letras, ele é o nome de um amigo! Caso o contrário, ele não é seu amigo.
+
+                  Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+                  Exemplo
+
+                  entrada ["Ryan", "Kieran", "Mark"] `deve retornar` ["Ryan", "Mark"]
+                  var entrada = ['Ryan', 'Kieran', 'Mark']`deve retornar`[('Ryan', 'Mark')];
+
+                      */
+      var arr = ['Ryan', 'Kieran', 'Mark'];
+
+      function friend(arr) {
+        let amigos = [];
+        for (let i = 0; i < arr.length; i++) {
+          let nome = arr[i];
+          if (nome.length == 4) {
+            amigos.push(nome);
+          }
+        }
+        return amigos;
+      }
+      var resumen = friend(['Ryan', 'Kieran', 'Mark']);
+      console.log(resumen);
+    </script>
+  </body>
+</html>

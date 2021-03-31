@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. criar objeto
+      //2. array lista
+      //3. percorre o array
+
+      let meuObjeto = {
+        array: [1, 2, 3],
+
+        forEach: function (callback) {
+          for (let i = 0; i < this.length; i++) {
+            console.log(callback(this.array[i]));
+          }
+        },
+      };
+
+      function printaQuadrado(x) {
+        console.log(x * 2);
+      }
+
+      function printaMetade(x) {
+        console.log(x / 2);
+      }
+
+      meuObjeto.forEach(printaQuadrado);
+      meuObjeto.forEach(printaMetade);
+    </script>
+  </body>
+</html>

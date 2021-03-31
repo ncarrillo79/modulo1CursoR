@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*******Implementação da classe NossoArray! A classe deve:
+Receber um array no construtor
+Ter sua própria implementação dos métodos:
+forEach
+map
+reduce
+NÃO deve utilizar os métodos forEach, map e reduce da classe Array do próprio JavaScript
+exemplo:
+Entrada:
+2
+1
+5
+Saída:
+1
+1 1 1 1 1
+1 1 1 2
+1 1 3
+1 2 2
+1 4
+2 3
+5
+*******/
+
+      // Primeiro número da entrada: Quantos vamos mostrar a sequência de quantos números?
+      let nEntradas = prompt('Quantos números');
+
+      let numerosMaximos = [];
+
+      // Lemos todos os números que queremos mostrar as sequências
+      for (let i = 1; i <= nEntradas; i++) {
+        let num = prompt('Qual o número máximo?');
+        numerosMaximos.push(num);
+      }
+
+      // Aqui é o laço principal
+      for (let numero of numerosMaximos) {
+        // Monta as colunas de 1 a numero
+        let numerosQueAGntQuerMultiplicar = [];
+        for (let i = 1; i <= numero; i++) numerosQueAGntQuerMultiplicar.push(i);
+
+        // Resto da lógica vai aqui...
+
+        // ...
+      }
+
+      // Dica
+      //            | 1 | 2 | 3 | 4 | 5
+      // -----------|---|---|---|---|---
+      // 1 1 1 1 1  | 5 | 0 | 0 | 0 | 0
+      // 1 1 1 2    | 3 | 1 | 0 | 0 | 0
+      // 1 1 3      | 2 | 0 | 1 | 0 | 0
+      // 1 2 2      | 1 | 2 | 0 | 0 | 0
+      // 1 4        | 1 | 0 | 0 | 1 | 0
+      // 2 3        | 0 | 1 | 1 | 0 | 0
+      // 5          | 0 | 0 | 0 | 0 | 1
+    </script>
+  </body>
+</html>

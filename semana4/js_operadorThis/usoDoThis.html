@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso del This</title>
+  </head>
+  <body>
+    <script>
+      //https://youtu.be/gr0FdCcsvCw
+
+      // let player1 = { name: 'juan' };
+      // let player2 = { name: 'teresa' };
+
+      // function dispara() {
+      //   console.log(`${this.name} bang, bang!!`);
+      // }
+
+      // //les damos poder para disparar
+      // player1.f = dispara;
+      // player2.f = dispara;
+
+      // player1.f(); // juan (this==player1)
+      // player2.f(); // teresa (this==player2)
+
+      // player2['f'](); //teresa
+
+      // dispara();
+
+      //*******************************************
+      //https://youtu.be/ZxUGsl7D7iw
+
+      function cuenta(usuario) {
+        console.log('cuenta', this);
+
+        return {
+          imprimirSeguridad: function () {
+            console.log('imprimirSeguridad', this);
+          },
+        };
+      }
+
+      var $this = cuenta('norma');
+      //$this.imprimirSeguridad();
+
+      // esto es lo que imprime o codigo de acima en consola: cuenta Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+
+      var demo = { usuario: 'MOMA' };
+      $this = cuenta.call(demo);
+      $this.imprimirSeguridad();
+
+      //METODO CALL
+      // El método call de javascript Invocar métodos de objetos terceros  #js. https://youtu.be/fj9juvrDgDU
+
+      // var persona = {
+      //   tomarCerveza: function () {
+      //     alert('hola');
+      //   },
+      // };
+
+      // var persona = {
+      //   nombre: 'gladys',
+      //   tomarCerveza: function () {
+      //     alert(`hola ${this.nombre}`);
+      //   },
+      // };
+
+      // var persona1 = {
+      //   nombre: 'normita',
+      //   tomarCerveza: function () {
+      //     alert(this.nombre);
+      //   },
+      // };
+
+      //persona.tomarCerveza.call(persona1); esto se verifica en la consola
+      // con el método call con este método, persona1 que tiene el metodo tomar cerveza  tomamos el atributo
+      //norma de person1 y lo asignamos a persona . y el resultado mostrado en pantalla es con el alert norma. aqui estamos enviando un objeto como atributo utilizando call
+    </script>
+  </body>
+</html>

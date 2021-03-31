@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!---Brincando com Classes no JS - Pessoa, pessoa, pessoa
+Chegou a hora da gente se divertir um pouco com classe.
+
+Pra esse desafio, defina uma classe Pessoa com as seguintes propriedades:
+
+Um construtor que deve aceitar até 4 argumentos :
+
+nome (o valor padrão deve ser "João" caso um valor não seja informado);
+sobrenome (o valor padrão deve ser "da Silva" caso um valor não seja informado);
+idade (o valor padrão deve ser 0 caso um valor não seja informado);
+genero (o valor padrão deve ser "Não informado" caso um valor não seja informado).
+Um método nomeCompleto que não precisa receber nenhum parâmetro e retorna o nome completo da pessoa (por exemplo, "João da Silva")
+
+Preparado pra resolver mais esse desafio?
+Boa sorte e divirta-se! :D
+
+describe("Example Tests", _ => {
+  // Default Arguments Test
+  Test.assertEquals(new Pessoa().nome, "João");
+  Test.assertEquals(new Pessoa().sobrenome, "da Silva");
+  Test.assertEquals(new Pessoa().idade, 0);
+  Test.assertEquals(new Pessoa().genero, "Não informado");
+  Test.assertEquals(new Pessoa().nomeCompleto(), "João da Silva");
+  // Example Custom Test
+  Test.assertEquals(new Pessoa("Jane", "Doe", 25, "Feminino").nome, "Jane");
+  Test.assertEquals(new Pessoa("Jane", "Doe", 25, "Feminino").sobrenome, "Doe");
+  Test.assertEquals(new Pessoa("Jane", "Doe", 25, "Feminino").idade, 25);
+  Test.assertEquals(new Pessoa("Jane", "Doe", 25, "Feminino").genero, "Feminino");
+  Test.assertEquals(new Pessoa("Jane", "Doe", 25, "Feminino").nomeCompleto(), "Jane Doe");
+});
+-->
+
+    <script>
+      class Pessoa {
+        constructor(
+          nome = 'João',
+          sobrenome = 'da Silva',
+          idade = 0,
+          genero = 'Não informado'
+        ) {
+          this.nome = nome;
+          this.sobrenome = sobrenome;
+          this.idade = idade;
+          this.genero = genero;
+        }
+
+        nomeCompleto() {
+          return `${this.nome} ${this.sobrenome}`;
+        }
+      }
+
+      let pessoa1 = new Pessoa();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+
+    <title>Desafioula25Metodo02</title>
+    <style>
+      body {
+        background-color: indianred;
+      }
+      #container {
+        border: solid 2px green;
+        min-height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+      }
+
+      button {
+        width: 260px;
+        height: 28px;
+        border-radius: 12%;
+        color: greenyellow;
+        background-color: indigo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        font-size: 15px;
+      }
+
+      #botao2 {
+        width: 160px;
+        height: 38px;
+        border-radius: 12%;
+        color: greenyellow;
+        background-color: crimson;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Criação de Botões DOM</h1>
+
+      <button id="botao2" onclick="createButtons()">Criar Botão</button>
+    </div>
+
+    <script>
+      function createButtons() {
+        var i = 0;
+        let numero = [];
+        //let apagaBotoes = document.querySelectorAll('.button');
+        //pesquisar  apagaBotoes.delete();
+        while (i <= 20) {
+          let btn = document.createElement('button');
+
+          document.body.appendChild(btn);
+          //btn.className = 'button';
+          numero.push([i]);
+          btn.textContent = numero[i];
+          btn.addEventListener('click', function () {
+            //alert('Olá ' + btn.textContent);
+          });
+          i++;
+        }
+      }
+      createButtons();
+    </script>
+  </body>
+</html>

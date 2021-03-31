@@ -1,0 +1,47 @@
+* {
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#box {
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 30px;
+    margin: 30px auto;
+}
+
+.container label {
+    width: auto;
+    margin-right: 10px;
+    
+}
+
+.container input {
+    width: 200px;
+    margin-right: 20px;
+    
+}
+
+.container button {
+    width: auto;
+}
+
+p {
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+}

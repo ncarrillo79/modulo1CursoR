@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Escreva uma função que receba o nome e retorne as iniciais do nome. Os dois nomes recebidos estão separados por um espaço.
+
+           A saída deve ter duas letras maiúsculas separadas por um ponto.
+
+           Deve ser assim:
+
+           Sam Harris => S.H
+
+           Patrick Feeney => P.F
+
+           1.criar arquivoHTML
+           2. criar Script
+           3. Perguntar nome e sobrenome
+           4. obter iniciais e converte-las
+           5. amostrar na web
+           */
+
+      //var nome = 'Norma Carrillo';
+
+      //var segundaInicial = nome.slice(6, 7);
+      //var espacoVazio = name.indexOf(' '); // a este espaco le vamos sumar (1) para achar a posicao da segunda inicial
+
+      //var PosicaoSegundaInicial = name.indexOf(' ') + 1;
+
+      function obterIniciais(nome) {
+        //primeira inicial
+        primeiraInicial = nome.slice(0, 1);
+        //posição da seginda inicial
+        var posicaoSegundaInicial = nome.indexOf(' ') + 1;
+        //obtendo a segunda inicial
+        var segundaInicial = nome.slice(
+          posicaoSegundaInicial,
+          posicaoSegundaInicial + 1
+        );
+        return `${primeiraInicial}.${segundaInicial}`;
+      }
+
+      var res = obterIniciais('Gladys Fajardo');
+
+      console.log(res);
+
+      //
+      //En lugar de trabajar con la función slice, utilicé charAt(0) para encontrar la inicial del nombre, y en el caso del apellido, también trabajé con charAt, pero en el argumento declaré el valor de la variable con la que hallé la posición de la inicial del apellido (posición del espacio+1).
+    </script>
+  </body>
+</html>

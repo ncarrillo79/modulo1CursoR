@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Sua função deve receber um array de números inteiros e um número inteiro n, encontrar todas as ocorrências de n (ou seja, suas posições no array original). Essa função deve retornar um array contendo todos os índices em que o número n aparece no array informado como parâmetro de entrada da função.
+
+      Se n não existir no array, retorne um array vazio [].
+
+      Assuma que n e todos os valores presentes no array dado para sua função sempre serão inteiros.
+      Exemplo:
+
+      encontreOcorrencias([6, 9, 3, 4, 3, 82, 11], 3) => [2, 4]*/
+
+      function encontreOcorrencias(array, n) {
+        let lista = [];
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] == n) {
+            lista.push(i);
+          }
+        }
+        return lista;
+      }
+
+      var res = encontreOcorrencias([6, 9, 3, 4, 3, 82, 11], 3);
+
+      console.log(res);
+    </script>
+  </body>
+</html>

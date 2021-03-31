@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numero Invertidos</title>
+  </head>
+  <body>
+    <script>
+      /*Converter número em um array de dígitos invertido Given a random
+          non-negative number, you have to return the digits of this number within an
+          array in reverse order. Crie uma função que deve receber um número inteiro
+          dígito          positivo (não precisamos nos preocupar com números negativos) e retornar os
+s desse número em um array, na ordem inversa a que originalmente eles
+          estão no número. Exemplo: 348597 => [7,9,5,8,4,3]  */
+
+      function inverter(n) {
+        //for (let i = 0; i < n.length; i++) {
+        var array = [Number(n.toString().split('').reverse().join(''))];
+        return array;
+      }
+
+      var res = inverter(54);
+      console.log(res);
+    </script>
+  </body>
+</html>

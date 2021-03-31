@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nomes = [
+        'vinicius',
+        'norma',
+        'erica',
+        'thome',
+        'david',
+        'gladys',
+        'elena',
+      ];
+      var i = 0;
+      while (i < nomes.length) {
+        criarBotao(nomes[i]);
+
+        i++;
+      }
+
+      function criarBotao(nome) {
+        document.write(
+          `<button onclick="alert('` +
+            nomes[i] +
+            `')")>` +
+            nomes[i] +
+            `</button><br><br>`
+        );
+      }
+    </script>
+  </body>
+</html>

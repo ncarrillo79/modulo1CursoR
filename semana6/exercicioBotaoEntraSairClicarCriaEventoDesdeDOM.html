@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos DOM</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      button {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+
+        font: normal 20pt Arial;
+        background: chartreuse;
+        color: yellow;
+        width: 200px;
+        height: 50px;
+        border-radius: 10px 10px 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="area">Olaaaaa!!!.....</div>-->
+
+    <!--<div
+      id="area"
+      onclick="clicar()"
+      onmouseenter="entrar()"
+      onmouseout="sair()"
+    >
+      interaja.....
+    </div> --->
+
+    <script>
+      var body = document.querySelector('body');
+      // function criaBotao() {
+      var btn = document.createElement('button');
+      body.appendChild(btn);
+      btn.textContent = 'olaaa!!!';
+      btn.id = 'button';
+      //}
+      // criaBotao();
+
+      var a = document.getElementById('button');
+      a.addEventListener('click', clicar);
+      a.addEventListener('mouseenter', entrar);
+      a.addEventListener('mouseout', sair);
+
+      function clicar() {
+        a.innerText = 'clicou!';
+        a.style.background = 'green';
+      }
+
+      function entrar() {
+        a.innerText = 'entrou!';
+        a.style.background = 'gray';
+      }
+
+      function sair() {
+        a.innerText = 'saiu!';
+        a.style.background = 'green';
+      }
+    </script>
+  </body>
+</html>

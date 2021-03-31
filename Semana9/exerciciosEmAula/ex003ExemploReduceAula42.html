@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!---Dado o array alunos a seguir:
+         Calcule a média de idade de todos os alunos usando o método reduce da classe Array ( Desafio: use
+        só uma linha de código )-->
+
+    <script>
+      let alunos = [
+        {
+          nome: 'aaaaa',
+          idade: 21,
+        },
+        {
+          nome: 'bbbbb',
+          idade: 33,
+        },
+        {
+          nome: 'ccccc',
+          idade: 42,
+        },
+        {
+          nome: 'ddddd',
+          idade: 18,
+        },
+        {
+          nome: 'eeeee',
+          idade: 26,
+        },
+        {
+          nome: 'fffff',
+          idade: 27,
+        },
+        {
+          nome: 'ggggg',
+          idade: 32,
+        },
+      ];
+
+      const resultado = alunos.reduce(
+        (acumulador, alunos) => acumulador + alunos.idade,
+        0
+      );
+
+      const media = Math.round(resultado / alunos.length);
+      console.log(media);
+
+      //exemplo1
+      // let reducer = (acumulador, valorActual) => novoAcumulador;
+
+      // const reducido = [1, 2].reduce((acc, el) => acc + el, 0);
+      // console.log(reducido);
+
+      //exemplo2
+      // const numeros = [1, 2, 3, 4, 5];
+      // const resultado = numeros.reduce((acc, el) => acc + el, 0);
+      // console.log(resultado)
+
+      //exemplo3;
+      const anidado = [1, [2, 3], 4, [5]];
+      //de essa constante anidado ali acima, queremos retornar esto:
+      //[1,2,3,4,5]
+
+      const plano = anidado.reduce(
+        (acumulador, valorActual) => acumulador.concat(valorActual),
+        []
+      );
+
+      console.log(plano);
+    </script>
+  </body>
+</html>

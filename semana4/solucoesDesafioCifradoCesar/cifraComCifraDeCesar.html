@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>CifraDeCesar</title>
+  </head>
+  <body>
+    <input type="text" size="25" />
+    <button type="submit" onclick="encriptar">Encriptar</button>
+    <button type="submit" onclick="desencriptar">Desencriptar</button>
+
+    <p id="resultado"></p>
+    <script>
+      /*function cifraComCifraDeCesar(deslocamento, mensagem) {
+              var mensagemEncriptada = 
+                String.fromCharCode(66) +
+                String.fromCharCode(67) +
+                String.fromCharCode(68) +
+                String.fromCharCode(69);
+
+              return mensagemEncriptada;
+            }
+            //A=65; B=66; C=67; D=68
+
+            A = 66;
+            B = 67;
+            C = 68;
+            D = 69;
+
+            document.write(cifraComCifraDeCesar(1, 'ABCD'));*/
+
+      /*function calculate() {
+              var input = document.getElementById('input').value.toUpperCase();
+              var result = '';
+
+              for (var i = 0; i < input.length; i++) {
+                //Passa por cada caracter do input
+
+                var posicaoDaLetraNoAlfabeto = input.charCodeAt(i) - 64; //Identifica qual letra é do alfabeto
+                var letraComDeslocamento = (posicaoDaLetraNoAlfabeto + key) % 26; //Faz o deslocamento de César e mantém dentro do alfabeto (26 letras)
+                letraComDeslocamento =
+                  letraComDeslocamento == 0 ? 26 : letraComDeslocamento; //MOD retornar 0 caso o resultado seja 26, tem que tratar isso
+                result += values[letraComDeslocamento - 1]; //Faz -1 porque a letra 1 (A) está no índice 0 do teu array.
+              }
+
+              document.getElementById('output').innerHTML = result;document
+            }*/
+
+      function encriptar(elemento) {
+        var palabra = document.getElementsByTagName('input')[0].value;
+        var palabra_codificada = btoa(palabra);
+        document.getElementById('resultado').innerHTML = palabra_codificada;
+      }
+
+      function desencriptar(elemento) {
+        var palabra = document.getElementsByTagName('input')[0].value;
+        var palabra_descodificada = atob(palabra);
+        document.getElementById('resultado').innerHTML = palabra_descodificada;
+      }
+    </script>
+  </body>
+</html>

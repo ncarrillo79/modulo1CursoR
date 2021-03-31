@@ -1,0 +1,71 @@
+h1{
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    font-size: 30px;
+    top: -18px;
+    
+
+
+}
+
+.cabecalho{
+    background-color: #000000;
+    width: 100%;
+    height: 50px;
+    
+
+        
+    
+}
+
+.font-logo
+{
+    color: #f4cb01;   
+    font-family: 'Arial black';
+    text-align: center;
+}
+
+body{
+    background-image: url(backgrund.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+h2{
+    color: #FFFFFF;
+    font-family: 'Arial black';   
+   
+}
+    
+.texto-processo-seletivo
+    {
+        text-align: center;
+    }
+
+.sessao-formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.div1{
+    text-align: center;
+    background-color: #f4cb01;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+p {
+    text-align: center;
+    font-family: "arial black";
+    font-size: smaller;
+}
+
+
+
+
+    
+

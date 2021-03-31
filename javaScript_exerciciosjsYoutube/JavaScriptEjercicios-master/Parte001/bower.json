@@ -1,0 +1,25 @@
+{
+  "name": "demo-bower",
+  "homepage": "https://github.com/Fhernd/JavaScriptEjercicios",
+  "authors": [
+    "John Ortiz Ordoñez"
+  ],
+  "description": "Dependencias de proyecto Web",
+  "main": "",
+  "keywords": [
+    "bower",
+    "json",
+    "librería"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

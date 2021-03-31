@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: lightblue;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  margin: 2px;
+  cursor: pointer;
+  background: rgb(188 130 211);
+  border: none;
+  color: white;
+  align-items: center;
+}
+
+.display {
+  width: 204px;
+  height: 50px;
+  margin: 5px;
+  font-size: 35px;
+  padding: 5px;
+  color: darkblue;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(to right, yellow, green);
+  padding: 15px;
+  border-radius: 15px 15px 0 0;
+}

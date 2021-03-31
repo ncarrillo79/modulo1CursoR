@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Nas escolas do futuro não haverá necessidade de chamadas. Ao entrar em sala,
+    uma câmera fará o reconhecimento facial do aluno e registrará sua presença!
+    Imagine que, a cada aula, um array guardasse o nome de todos os alunos que
+    estiveram presentes na aula. Escreva uma função
+    estavaPresenteNaAula(nomeDoAluno, nomesDosPresentes) Essa função deve
+    receber dois parâmetros: O primeiro deve representar o nome de um aluno O
+    segundo deve representar um array com o os nomes dos alunos presentes. A sua
+    função deve retornar true caso o nome do aluno passado como parâmetro
+    estiver entre os presentes. false caso contrário.
+    <script>
+      function estavaPresenteNaAula(nomeDoAluno, nomesDosPresentes) {
+        if (nomesDosPresentes.indexOf('Matheus Ferreira')) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      estavaPresenteNaAula('Caio', ['Matheus', 'Leticia', 'Caio']);
+
+      /*Algumas vezes precisamos padronizar as informações antes de guardá-las no nosso sistema. Escreva uma função transformaParaMaiusculo(palavras). Essa função recebe como parâmetro um array de palavras. Ela deve retornar um array com a versão MAIÚSCULA de todas as palavras contidas no array passado como parâmetro.*/
+      function transformaParaMaiusculo(palavras) {
+        var array = Array();
+
+        for (var i = 0; i < palavras.length; ++i)
+          array.push(palavras[i].toUpperCase());
+
+        return array;
+      }
+      transformaParaMaiusculo(['gato', 'cachorro', 'tartaruga']);
+
+      //otra forma
+      function transformaParaMaiusculo(palavras) {
+        var array = Array();
+        for (var i = 0; i < palavras.length; i++) {
+          array.push(palavras[i].toUpperCase());
+        }
+        return array;
+      }
+      transformaParaMaiusculo(['gato', 'cachorro', 'tartaruga']);
+
+      /*Uma fábrica de biscoitos da sorte precisa de um sistema. O sistema deve gerar seis dezenas aleatórias para serem impressas. Sabe como é: Palpites para seus clientes jogarem na mega sena! O seu trabalho é escrever uma função gerarDezenas(). Essa função não recebe nenhum parâmetro. Tudo que ela deve fazer é gerar e retornar um array contendo seis números aleatórios entre 1 e 60.*/
+
+      // Seu código vem aqui
+      function gerarDezenas() {
+        var array = [];
+
+        for (var i = 0; i < 6; i++) {
+          array.push(Math.round(Math.random() * 60));
+        }
+        return array;
+
+        /*Escreva uma função maxmin(a, b, c, d, e) que receba cinco números como parâmetros.
+        Sua função deve retornar um array onde o primeiro elemento é o menor dos parâmetros e o segundo elemento é o maior dos parâmetros.*/
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    /*A tabela abaixo fornece uma classificação das classes sociais (IBGE) com
+    basse no limite inferior e limite superior de renda familiar. Classes
+    econômicas Limite inferior Limite Superior Classe E 0 R$1254 Classe D R$1255
+    R$2004 Classe C R$2005 R$8640 Classe B R$8641 R$11261 Classe A R$11262 -
+    Elabore uma função chamada classificaRenda que retornará o a classe social
+    com base na renda fornecida. Sua função deve: Receber como parâmetro a renda
+    Retornar a classe com base na faixa na qual a renda se encontra Tratar
+    possíveis erros! Caso a renda fornecida seja negativa, sua função deve
+    retornar: "Erro: renda negativa" */
+    <script>
+      function classificaRenda(salario) {
+        if (salario > 0 && salario < 1254) {
+          return 'Classe E';
+        } else if (salario >= 1255 && salario < 2004) {
+          return 'Classe D';
+        } else if (salario >= 2005 && salario < 8640) {
+          return 'Classe C';
+        } else if (salario >= 8641 && salario < 11261) {
+          return 'Classe B';
+        } else if (salario >= 11262) {
+          return 'Classe A';
+        } else if (salario < 0) {
+          return 'Erro: renda negativa';
+        } else {
+          return 'Classe E';
+        }
+      }
+      classificaRenda(2001);
+
+      var renda2 = classificaRenda(-1);
+      document.write(renda2);
+      console.log(renda2);
+    </script>
+  </body>
+</html>

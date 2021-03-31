@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Escreva uma função chamada calculate, que recebe 3 valores. O primeiro e o terceiro valores são números. O segundo valor é um caractere. Se o caractere for "+", "-", "*" ou "/" , a função irá retornar o resultado da operação matemática correspondente do primeiro número sobre o segundos. Se a String não for nenhum dos caracteres especificados , a função deverá retornar null.*/
+      function calculate(num1, operation, num2) {
+        if (num2 == 0 && operation == '/') {
+          return null;
+        } else if (operation == '+') {
+          return num1 + num2;
+        } else if (operation == '-') {
+          return num1 - num2;
+        } else if (operation == '*') {
+          return num1 * num2;
+        } else if (operation == '/') {
+          return num1 / num2;
+        } else if (
+          operation != '+' ||
+          operation != '-' ||
+          operation != '*' ||
+          operation != '/'
+        ) {
+          return null;
+        }
+      }
+
+      console.log(calculate(6, '/', 2));
+    </script>
+  </body>
+</html>

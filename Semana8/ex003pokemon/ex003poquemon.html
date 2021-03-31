@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button id="botao">Aqui seu Pokemon</button>
+      <br />
+      <img id="pokemon" alt="" />
+      <p id="mipokemon"></p>
+    </div>
+    <script>
+      var botaoTraerMiPokemon = document.querySelector('#botao');
+      let contador = 1;
+
+      botaoTraerMiPokemon.addEventListener('click', function () {
+        var pedido = new XMLHttpRequest();
+        pedido.open('GET', ' https://pokeapi.co/api/v2/pokemon/' + contador);
+        contador++;
+
+        pedido.addEventListener('load', function () {
+          console.log(contador);
+          if (pedido.status == 200) {
+            var resposta = pedido.responseText;
+            var pokemoncinho = JSON.parse(resposta);
+            console.log(pokemoncinho);
+            let imagem = pokemoncinho.sprites.front_shiny;
+            let foto = document.querySelector('#pokemon');
+            foto.src = imagem;
+            console.log(foto);
+            mipokemon.textContent = pokemoncinho.name;
+            mipokemon.style.fontSize = '35px';
+            // console.log(pokemoncinho)
+          } else {
+            //  console.log(pedido.status);
+            //   console.log(pedido.responseText);
+          }
+        });
+
+        pedido.send();
+      });
+    </script>
+  </body>
+</html>

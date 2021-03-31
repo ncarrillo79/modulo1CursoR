@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex006</title>
+  </head>
+  <body>
+    <script>
+      const tabelaIdades = {
+        idadePrimeiroFilho: 14,
+        idadeSegundoFilho: 9,
+        idadeTerceiroFilho: 8,
+      };
+
+      var idade1 = tabelaIdades.idadePrimeiroFilho;
+      var idade2 = tabelaIdades.idadeSegundoFilho;
+      var idade3 = tabelaIdades.idadeTerceiroFilho;
+
+      function somaBoletim(boletim) {
+        let notaTotal = 0;
+
+        let notas = Object.values(boletim);
+
+        notas.forEach((element) => {
+          notaTotal += element;
+        });
+
+        return notaTotal;
+      }
+
+      function verificaMenorIdade(primeiro, segundo, terceiro) {
+        if (primeiro < segundo && primeiro < terceiro) {
+          return 'b1';
+        }
+        if (segundo < primeiro && segundo < terceiro) {
+          return 'b2';
+        }
+        if (terceiro < primeiro && terceiro < segundo) {
+          return 'b3';
+        }
+      }
+
+      function verificaRecompensa(notas1, notas2, notas3) {
+        let b1 = somaBoletim(notas1);
+        let b2 = somaBoletim(notas2);
+        let b3 = somaBoletim(notas3);
+
+        let filhoMaisNovo = verificaMenorIdade(idade1, idade2, idade3);
+
+        if (b1 > b2 && b1 > b3) {
+          return 'b1';
+        }
+
+        if (b2 > b1 && b2 > b3) {
+          return 'b2';
+        }
+        if (b3 > b1 && b3 > b2) {
+          return 'b3';
+        } else {
+          return filhoMaisNovo;
+        }
+      }
+
+      function recompensa(boletim1, boletim2, boletim3) {
+        let resultado = verificaRecompensa(boletim1, boletim2, boletim3);
+
+        if (resultado == 'b1') {
+          return 'Eu preciso comprar uma bicicleta para meu primeiro filho.';
+        }
+        if (resultado == 'b2') {
+          return 'Eu preciso comprar uma bicicleta para meu segundo filho.';
+        }
+        if (resultado == 'b3') {
+          return 'Eu preciso comprar uma bicicleta para meu terceiro filho.';
+        }
+      }
+    </script>
+  </body>
+</html>

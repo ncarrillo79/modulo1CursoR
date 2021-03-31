@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*En un juego entre dos jugadores: Jose y Juan en el maracanã. Um jogador só ficará em pé , e depois do jogo numa entrevista, o vencedor vai fazer seu fomoso depoimento. !O desafío é devolver o depoimento a segundo o vencedor!. Se o ganador e Jose ele dirà:
+        "-Não me importa"
+        Se o vencedor e Juan, ele dirá: "Quero agradecer"
+        */
+
+      function jogo(vencedor) {
+        ganador = vencedor.lower();
+        if (vencedor == 'Juan') {
+          return 'Não me importa';
+        } else {
+          return 'Quero agradecer';
+        }
+      }
+
+      console.log(jogo('Jose'));
+    </script>
+  </body>
+</html>

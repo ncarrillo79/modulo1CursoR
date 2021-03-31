@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function codifica(str) {
+        return str
+          .split('')
+          .map((e) => String.fromCharCode(e.charCodeAt() + 8))
+          .join('');
+      }
+
+      function decodifica(cod) {
+        return str
+          .split('')
+          .map((e) => String.fromCharCode(e.charCodeAt() - 8))
+          .join('');
+      }
+
+      //console.log(decodifica('Hellow World!'));
+      console.log(codifica('norma'));
+    </script>
+  </body>
+</html>
